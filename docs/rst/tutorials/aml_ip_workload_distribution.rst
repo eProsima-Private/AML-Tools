@@ -44,7 +44,7 @@ If the demo package is not compiled, please refer to `Build demos <https://aml-i
 
     colcon build --packages-up-to amlip_workload_distribution_demo
 
-Once AML-IP packages are installed and built, import the libraries using the following command.
+Once |amlip| packages are installed and built, import the libraries using the following command.
 
 .. code-block:: bash
 
@@ -60,7 +60,7 @@ Main Node
 
 This node simulates a `Main Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/main.html#user-manual-nodes-main>`__.
 It does not use real *AML Jobs*, but strings.
-It is implemented in |python| using :code:`amlip_py` API.
+It is implemented in |python| using :code:`amlip_py` :term:`API`.
 
 The code can be found `here <https://github.com/eProsima/AML-IP/blob/main/amlip_demo_nodes/amlip_workload_distribution_demo/main_node_sync.py>`__.
 
@@ -70,7 +70,7 @@ Computing Node
 This node simulates a `Computing Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/computing.html#user-manual-nodes-computing>`__.
 It does not use real *AML Jobs*, but strings.
 It does not have a real *AML Engine* but instead the calculation is an *upper-case* conversion of the string received.
-It is implemented in |cpp| using :code:`amlip_cpp` API.
+It is implemented in |cpp| using :code:`amlip_cpp` :term:`API`.
 
 The code can be found `here <https://github.com/eProsima/AML-IP/blob/main/amlip_demo_nodes/amlip_workload_distribution_demo/computing_node_sync.cpp>`__.
 
@@ -82,7 +82,7 @@ This demo runs the implemented nodes in `amlip_demo_nodes/amlip_workload_distrib
 Run Main Node
 -------------
 
-Take into account that this node will wait until there are *Computing Nodes* running and available in the same :term:`LAN` in order to solve the jobs.
+Take into account that this node will wait until there are `Computing Nodes <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/computing.html>`__ running and available in the same :term:`LAN` in order to solve the jobs.
 
 There are 2 different ways to run it, an automatic one and a manual one:
 
@@ -91,7 +91,7 @@ Automatic version
 
 In this version, the python executable expects input arguments.
 For each argument, it will convert it to a string (:code:`str`) and send it as a *Job*.
-Once the arguments run out, it will finish execution and destroy the Node.
+Once the arguments run out, it will finish execution and destroy the node.
 
 Run the following command:
 
@@ -121,7 +121,7 @@ Manual version
 
 In this version the python program expects to receive keyboard input.
 For each keyboard input received, it will convert it to a string (:code:`str`) and send it as a *Job*.
-When empty string given, it will finish execution and destroy the Node.
+When empty string given, it will finish execution and destroy the node.
 
 Run the following command:
 
@@ -157,10 +157,10 @@ Run Computing Node
 ------------------
 
 To run it, one integer argument is required.
-This will be the number of jobs this Node will answer to before finishing its execution and being destroyed.
+This will be the number of jobs this node will answer to before finishing its execution and being destroyed.
 
 Take into account that this node will wait until it has solved 2 different jobs.
-If there are more than 1 *Computing Node* running, one job is only solved by one of them.
+If there are more than 1 `Computing Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/computing.html>`__ running, one job is only solved by one of them.
 
 Run the following command to answer 2 jobs before closing:
 

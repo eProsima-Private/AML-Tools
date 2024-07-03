@@ -43,7 +43,7 @@ If the demo package is not compiled, please refer to `Build demos <https://aml-i
 
     colcon build --packages-up-to amlip_collaborative_learning_demo
 
-Once AML-IP packages are installed and built, import the libraries using the following command.
+Once |amlip| packages are installed and built, import the libraries using the following command.
 
 .. code-block:: bash
 
@@ -59,11 +59,11 @@ Model Manager Receiver Node
 
 This is the Python code for the `Model Manager Receiver Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_receiver.html#user-manual-nodes-model-receiver>`__ application.
 It does not use real *AML Models*, but strings.
-It is implemented in |python| using :code:`amlip_py` API.
+It is implemented in |python| using :code:`amlip_py` :term:`API`.
 
 This code can be found `here <https://github.com/eProsima/AML-IP/blob/main/amlip_demo_nodes/amlip_collaborative_learning_demo/amlip_collaborative_learning_demo/model_receiver_custom.py>`__.
 
-The next block includes the Python header files that allow the use of the AML-IP Python API.
+The next block includes the Python header files that allow the use of the *AML-IP Python API*.
 
 .. code-block:: python
 
@@ -116,8 +116,8 @@ This class is supposed to be implemented by the user in order to process the mes
 
             return True
 
-The `main` function orchestrates the execution of the Model Manager Receiver node.
-It creates an instance of the `ModelManagerReceiverNode` and starts its execution with the specified listener.
+The ``main`` function orchestrates the execution of the `Model Manager Receiver Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_receiver.html#user-manual-nodes-model-receiver>`__.
+It creates an instance of the ``ModelManagerReceiverNode`` and starts its execution with the specified listener.
 
 .. code-block:: python
 
@@ -169,11 +169,11 @@ Model Manager Sender Node
 This is the Python code for the `Model Manager Sender Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_sender.html#model-manager-sender-node>`__ application.
 It does not use real *AML Models*, but strings.
 It does not have a real *AML Engine* but instead the calculation is an *upper-case* conversion of the string received.
-It is implemented in |python| using :code:`amlip_py` API.
+It is implemented in |python| using :code:`amlip_py` :term:`API`.
 
 This code can be found `here <https://github.com/eProsima/AML-IP/blob/main/amlip_demo_nodes/amlip_collaborative_learning_demo/amlip_collaborative_learning_demo/model_sender_custom.py>`__.
 
-The following block includes the Python header files necessary for using the AML-IP Python API.
+The following block includes the Python header files necessary for using the *AML-IP Python API*.
 
 .. code-block:: python
 
@@ -220,8 +220,8 @@ This class is supposed to be implemented by the user in order to process the mes
 
             return reply
 
-The `main` function orchestrates the execution of the Model Manager Sender node.
-It creates an instance of `ModelManagerSenderNode`.
+The ``main`` function orchestrates the execution of the `Model Manager Sender Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_sender.html#model-manager-sender-node>`__.
+It creates an instance of ``ModelManagerSenderNode``.
 
 .. code-block:: python
 

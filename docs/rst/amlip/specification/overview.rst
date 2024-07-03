@@ -50,7 +50,7 @@ This is the main programming language in |amlip|.
 Also |fastdds| is mainly built in |cpp| and using the same programming language allows to easily interact without losing performance with the middleware layer.
 
 There is a public :term:`API` found in :code:`AML-IP/amlip_cpp/include` with all the installed headers that can be used from the user side.
-The API, implementation and testing of this part of the code can be found mainly under sub-package `amlip_cpp <https://github.com/eProsima/AML-IP/tree/main/amlip_cpp>`__.
+The :term:`API`, implementation and testing of this part of the code can be found mainly under sub-package `amlip_cpp <https://github.com/eProsima/AML-IP/tree/main/amlip_cpp>`__.
 
 Python
 ------
@@ -58,8 +58,8 @@ Python
 This is the programming language though to be used by a final user.
 |python| has been chosen as it is easier to work with state-of-the-art :term:`ML` projects.
 
-Nodes and classes that the user needs to instantiate in order to implement their own code are parsed from |cpp| by using |swig| tool, giving the user a |python| API.
-The API, implementation and testing of this part of the code can be found mainly under sub-package `amlip_py <https://github.com/eProsima/AML-IP/tree/main/amlip_py>`__.
+Nodes and classes that the user needs to instantiate in order to implement their own code are parsed from |cpp| by using |swig| tool, giving the user a |python| :term:`API`.
+The :term:`API`, implementation and testing of this part of the code can be found mainly under sub-package `amlip_py <https://github.com/eProsima/AML-IP/tree/main/amlip_py>`__.
 
 
 Architecture and Infrastructure
@@ -71,7 +71,7 @@ The whole project is hosted on a |github| repository, and can be found in the fo
 The code project is divided in sub-packages that can be built, installed and tested independently.
 
 |amlip| is a software project that does not rely on any specific hardware or Operating System, and does not require any physical infrastructure.
-The storage and CI is hosted by |github|.
+The storage and :term:`CI` is hosted by |github|.
 
 Enabling technologies
 =====================

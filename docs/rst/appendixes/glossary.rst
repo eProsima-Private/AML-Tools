@@ -62,7 +62,7 @@ DDS
     DDS
         **Data Distribution Service** protocol.
         Specification: `<https://www.omg.org/spec/DDS/>`_.
-        More information in `AML-IP Developer Manual section <https://aml-ip.readthedocs.io/en/latest/rst/developer_manual/technologies/technologies.html>`_.
+        More information in the :ref:`Overview section <technologies_dds>`.
 
     Domain Id
         Virtual partition for DDS networks.

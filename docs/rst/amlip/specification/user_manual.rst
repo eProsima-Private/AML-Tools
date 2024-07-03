@@ -21,7 +21,7 @@ For more infromation, check the AML-IP Scenarios sections:
 * `Monitor Network State Scenario <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/scenarios/monitor_state.html>`__: performs monitoring, analysis and debugging of the network.
   The main node in this scenario is the Status Node.
 * `Workload Distribution Scenario <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/scenarios/workload_distribution.html>`__: distributes high-computation tasks, specifically training data-sets for an :term:`AML` model, across remote nodes using `MultiService over DDS <https://aml-ip.readthedocs.io/en/latest/rst/developer_manual/protocols/protocols.html#multiservice-over-dds>`__ communication.
-  Tasks are divided into Jobs, which are processed by Computing Nodes to parallelize the workload, freeing the Main Node to perform other tasks.
+  Tasks are divided into *Jobs*, which are processed by Computing Nodes to parallelize the workload, freeing the Main Node to perform other tasks.
 * `Collaborative Learning Scenario <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/scenarios/collaborative_learning.html>`__: involves Model Manager Receiver and Sender nodes sharing locally obtained models without exchanging private datasets.
   Using `RPC over DDS <https://aml-ip.readthedocs.io/en/latest/rst/developer_manual/protocols/protocols.html#rpc-over-dds>`__ communication, Receiver Nodes request models based on published statistics from Sender Nodes, aiming to develop more complex and accurate models.
 * `Distributed Inference Scenario <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/scenarios/distributed_inference.html>`__: distributes large datasets to remote Inference Nodes for parallel processing, ensuring other critical tasks on the main device are not blocked.
@@ -46,11 +46,11 @@ In this last case, the Nodes are programming *Objects* that can be instantiated 
 For more information, check the AML-IP Nodes sections:
 
 * `Agent Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/agent.html>`__: uses the |eddsrouter| to connect distributed :term:`DDS` networks, enabling communication between :term:`DDS` entities across different geographic locations as if on the same network.
-  It bridges local |amlip| clusters with the broader network over :term:`WAN`s, centralizing :term:`WAN` discovery and communication.
-  The node supports three types: Client Node (connects to a server), Server Node (waits for client connections), and Repeater Node (forwards messages across :term:`LAN`s).
+  It bridges local |amlip| clusters with the broader network over :term:`WAN`\s, centralizing :term:`WAN` discovery and communication.
+  The node supports three types: Client Node (connects to a server), Server Node (waits for client connections), and Repeater Node (forwards messages across :term:`LAN`\s).
 * `Status Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/status.html>`__: subscribes to the Status Topic, receiving status data from all other nodes in the network, and executing a user-defined callback function for each message.
   It is the main component of the Monitor Network State Scenario.
-  Users can start and stop this node using process_status_async and stop_processing methods, respectively.
+  Users can start and stop this node using :code:`process_status_async` and :code:`stop_processing` methods, respectively.
 * `Main Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/main.html>`__: participates in the Workload Distribution Scenario by sending serialized Job Data Types to remote Computing Nodes and receiving solutions as Job Solution Data Types.
   It operates synchronously or asynchronously: in synchronous mode, it waits for each job to complete before sending the next, using :code:`request_job_solution` to handle each task sequentially.
   In asynchronous mode, it employs a callback or listener to process solutions as they arrive, enabling parallel task execution without blocking.
@@ -67,7 +67,7 @@ For more information, check the AML-IP Nodes sections:
   Asynchronous operation utilizes callbacks or listeners to process multiple requests concurrently, optimizing performance in distributed computing environments.
 * `Model Manager Receiver Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_receiver.html>`__: acts as an active client that interacts with Model Manager Sender Nodes.
   It receives statistics about available models via :code:`statistics_received`, then sends requests for specific models using :code:`request_model`.
-  Once a requested model, serialized as Model Reply Data Type, arrives, it is processed by model_received.
+  Once a requested model, serialized as Model Reply Data Type, arrives, it is processed by :code:`model_received`.
   This node facilitates collaborative learning by enabling efficient model sharing across distributed networks, enhancing model accuracy and complexity without sharing private training datasets.
 * `Model Manager Sender Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/model_manager_sender.html>`__: acting as a passive server that manages and distributes models.
   It sends out statistics about the models it manages using :code:`publish_statistics`, then waits for incoming requests for specific models serialized as Model Request Data Type.
@@ -82,7 +82,7 @@ Tools
 Agent Tool
 ----------
 
-This tool launches an `Agent Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/agent.html>`__, which is the node in charge of communicating a local node or AML-IP cluster with the rest of the network in :term:`WAN`\s.
-It centralizes the :term:`WAN` discovery and communication, i.e. it is the bridge for all the nodes in their :term:`LAN`\s with the rest of the AML-IP components.
+This tool launches an `Agent Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/agent.html>`__, which is the node in charge of communicating a local node or |amlip| cluster with the rest of the network in :term:`WAN`\s.
+It centralizes the :term:`WAN` discovery and communication, i.e. it is the bridge for all the nodes in their :term:`LAN`\s with the rest of the |amlip| components.
 
 For more information, check the `AML-IP Agent tool section <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/tools/agent.html>`__.
