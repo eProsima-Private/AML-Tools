@@ -56,6 +56,8 @@
    :hidden:
 
    /rst/tutorials/aml_pipeline
+   /rst/tutorials/aml_ip_collaborative_learning
+   /rst/tutorials/aml_ip_workload_distribution
 
 .. _index_notes:
 
