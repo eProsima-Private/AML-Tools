@@ -1,4 +1,4 @@
-.. eProsima DDS Record & Replay documentation master file.
+.. eProsima AML-Tools documentation master file.
 
 .. include:: rst/formalia/titlepage.rst
 
@@ -37,6 +37,16 @@
    /rst/amldl/consistency_checker/consistency_checker
    /rst/amldl/debugger/debugger
 
+.. _index_amlip:
+
+.. toctree::
+   :caption: AML-IP
+   :maxdepth: 2
+   :numbered: 5
+   :hidden:
+
+   /rst/amlip/specification/amlip
+
 .. _index_tutorials:
 
 .. toctree::
@@ -46,6 +56,8 @@
    :hidden:
 
    /rst/tutorials/aml_pipeline
+   /rst/tutorials/aml_ip_collaborative_learning
+   /rst/tutorials/aml_ip_workload_distribution
 
 .. _index_notes:
 
@@ -55,3 +67,12 @@
    :hidden:
 
    /rst/notes/notes
+
+.. _index_appendix:
+
+.. toctree::
+   :caption: Appendixes
+   :maxdepth: 2
+   :hidden:
+
+   /rst/appendixes/glossary

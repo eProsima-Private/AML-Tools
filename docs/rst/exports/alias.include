@@ -1,13 +1,28 @@
 .. |FastDDSDocs| replace:: `Fast DDS Documentation <https://fast-dds.docs.eprosima.com/en/v2.10.1/>`__
 .. |DDSSpecification| replace:: `DDS specification <https://www.omg.org/spec/DDS/1.4/About-DDS/>`__
+.. |amlipgithubpage| replace:: `AML-IP Github repository <https://github.com/eProsima/AML-IP>`__
 
 .. |ddsrouter| replace:: *DDS Router*
 .. |fastdds| replace:: *Fast DDS*
+.. |amlip| replace:: *AML-IP*
 
 .. |eddsrouter| replace:: *eProsima DDS Router*
 .. |efastdds| replace:: *eProsima Fast DDS*
 .. |eddsrecord| replace:: *eProsima DDS Record & Replay*
 .. |eddsrecorder| replace:: *eProsima DDS Recorder*
 .. |eddsreplayer| replace:: *eProsima DDS Replayer*
+.. |eamlip| replace:: *eProsima AML-IP*
+
+.. |amlip_cpp| replace:: :code:`amlip_cpp`
+.. |amlip_swig| replace:: :code:`amlip_swig`
+.. |amlip_py| replace:: :code:`amlip_py`
+.. |amlip_docs| replace:: :code:`amlip_docs`
 
 .. |k8s| replace:: *K8s*
+.. |aml| replace:: *AML*
+
+.. |git| replace:: `git <https://git-scm.com/>`__
+.. |github| replace:: `github <https://github.com/>`__
+.. |cpp| replace:: `C++ <https://isocpp.org/std/the-standard/>`__
+.. |python| replace:: `Python <https://peps.python.org/>`__
+.. |swig| replace:: `SWIG <https://www.swig.org/>`__
