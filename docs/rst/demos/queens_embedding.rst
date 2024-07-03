@@ -54,8 +54,9 @@ In the example below, we return just the duples and constants definitions, witho
 
     from amldl import ADD, APP, C, CV, Descriptor, EXC, F, INC, M, R, T, V, S
 
+    boardDim = 8
 
-    def embedding(boardDim):
+    def embedding(args):
 
         def ix(x, y):
             return x + y * boardDim

@@ -68,6 +68,7 @@
    :hidden:
 
    /rst/demos/queens_embedding
+   /rst/demos/consistency_checker
 
 .. _index_notes:
 
