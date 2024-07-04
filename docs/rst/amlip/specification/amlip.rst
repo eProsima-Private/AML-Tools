@@ -3,9 +3,9 @@
 
 .. _amlip_specification:
 
-######
-AML-IP
-######
+#################################
+AML Integrating Platform (AML-IP)
+#################################
 
 *AML Integrating Platform (AML-IP)* is a communications framework in charge of data exchange between *Algebraic Machine Learning (AML)* nodes through local or remote networks.
 It is designed to allow non-experts users to create and manage a cluster of |aml| nodes to exploit the distributed and concurrent learning capabilities of |aml|.
@@ -37,4 +37,3 @@ Check section :ref:`amlip_overview` to have a further explanation of the concept
    :hidden:
 
    /rst/amlip/specification/overview
-   /rst/amlip/specification/user_manual

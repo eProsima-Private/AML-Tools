@@ -46,6 +46,7 @@
    :hidden:
 
    /rst/amlip/specification/amlip
+   /rst/amlip/user_manual/user_manual
 
 .. _index_amldashboard:
 
