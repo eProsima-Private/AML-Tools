@@ -20,6 +20,9 @@ Glossary
     OS
         **Operating System**
 
+    GUI
+        **Graphical User Interface**
+
 AML-IP
 ======
 

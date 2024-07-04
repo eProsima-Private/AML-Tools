@@ -47,6 +47,18 @@
 
    /rst/amlip/specification/amlip
 
+.. _index_amldashboard:
+
+.. toctree::
+   :caption: AML Dashboard
+   :maxdepth: 2
+   :numbered: 5
+   :hidden:
+
+   /rst/amldashboard/specification/amldashboard
+   /rst/amldashboard/specification/interfaces
+   /rst/amldashboard/specification/use_cases
+
 .. _index_tutorials:
 
 .. toctree::
