@@ -104,4 +104,4 @@ This output is followed by the positive duples that might be causing the inconsi
       Q[4] < E[4]
 
 The inconsistency comes from :math:`Q[4] < E[4]` that together with :math:`{R[4],C[0]} < Q[4]` produces :math:`R[4] < E[4]`.
-And the negative duple above, :math:`R[4] \nless E[4]`.
+This duple is inconsistent with the negative duple in region 1, :math:`R[4] \nless E[4]`.

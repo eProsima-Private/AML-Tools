@@ -69,6 +69,7 @@
 
    /rst/demos/queens_embedding
    /rst/demos/consistency_checker
+   /rst/demos/debugger
 
 .. _index_notes:
 
