@@ -53,7 +53,7 @@ It is divided into two sections:
    - **Training Progress**: A loading bar shows the projected training duration.
      Below it, variations in loss and accuracy per epoch are visualized, helping experts assess the classification quality and data noise level.
 
-.. figure:: /rst/figures/amldashboard/interfaces_data_collection.png
+.. figure:: /rst/figures/amldashboard/interfaces_training.png
 
 Explore Models
 ==============
@@ -65,7 +65,7 @@ In the current setup, a confusion matrix is provided based on the trained model.
 Users must actively trigger the update of the matrix, facilitating a clear before-and-after comparison.
 Future work aims to extend this section with more targeted visualizations utilizing the |aml| output structure.
 
-.. figure:: /rst/figures/amldashboard/interfaces_data_collection.png
+.. figure:: /rst/figures/amldashboard/interfaces_explore_models.png
 
 Music Exploration
 =================
@@ -86,4 +86,4 @@ Sound is produced by looping audio tracks of musical instruments assigned during
 While the demo is limited to four instruments, users can easily change this.
 Users can recreate gestures to explore sound intersections using *AML Dashboard*.
 
-.. figure:: /rst/figures/amldashboard/interfaces_data_collection.png
+.. figure:: /rst/figures/amldashboard/interfaces_music_exploration.png
