@@ -21,8 +21,8 @@
    :numbered: 5
    :hidden:
 
-   Linux </rst/installation/linux.rst>
-   Docker Image </rst/installation/docker.rst>
+   Linux </rst/installation/linux/linux.rst>
+   Docker Image </rst/installation/docker/docker.rst>
 
 .. _index_amldl:
 
