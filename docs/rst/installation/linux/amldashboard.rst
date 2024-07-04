@@ -47,4 +47,4 @@ Navigate to the ``frontend/aml_dashboard`` directory and install the frontend de
     cd frontend/aml_dashboard
     npm i
 
-By following these steps, you'll have *AML Dashboard* up and running, equipped with all the necessary components and dependencies.
+By following these steps, you'll have *AML Dashboard* equipped with all the necessary components and dependencies.

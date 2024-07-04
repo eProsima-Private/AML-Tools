@@ -57,8 +57,9 @@
    :hidden:
 
    /rst/amldashboard/specification/amldashboard
-   /rst/amldashboard/specification/interfaces
-   /rst/amldashboard/specification/use_cases
+   /rst/amldashboard/user_manual/interfaces
+   /rst/amldashboard/user_manual/usage
+   /rst/amldashboard/use_cases/use_cases
 
 .. _index_tutorials:
 
