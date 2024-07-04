@@ -18,7 +18,13 @@ The primary goal of the *AML Dashboard* is to enable users to:
 
 To achieve this, the *AML Dashboard* integrates four main interfaces:
 
-1. **Gesture Input Interface**: Allows users to collect data through user-defined input gestures.
-2. **Training Interface**: Facilitates the training of |aml| models based on user-generated datasets.
-3. **Model Exploration Interface**: Enables users to explore and compare the capabilities of |aml| models with other :term:`ML` approaches.
-4. **Music Exploration Interface**: Applies the trained |aml| algorithm in real-time, enabling users to explore new sound patterns using personal gestures.
+* **Gesture Input Interface**: Allows users to collect data through user-defined input gestures.
+* **Training Interface**: Facilitates the training of |aml| models based on user-generated datasets.
+* **Model Exploration Interface**: Enables users to explore and compare the capabilities of |aml| models with other :term:`ML` approaches.
+* **Music Exploration Interface**: Applies the trained |aml| algorithm in real-time, enabling users to explore new sound patterns using personal gestures.
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   /rst/amldashboard/specification/implementation
