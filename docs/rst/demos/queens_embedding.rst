@@ -6,7 +6,7 @@ Create an AML Embedding
 #######################
 
 In this section we describe step by step how to create an embedding.
-We illustrate the process by creating an embedding for the `N-Queens Completion Problem <https://github.com/eProsima-Private/AML-Tools/tree/main/resources/demos/queens_embedding.py>`.
+We illustrate the process by creating an embedding for the `N-Queens Completion Problem <https://github.com/eProsima-Private/AML-Tools/tree/main/resources/demos/queens_embedding.py>`_.
 
 The ``amldl`` package provides all the functions needed to build an embedding.
 For the N-Queens Completion Problem we use the following functions:
