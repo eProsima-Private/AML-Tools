@@ -2,8 +2,8 @@
 
 .. _demos_debugger:
 
-AMLDL Debugger
-##############
+AML-DL Debugger
+###############
 
 Here we use the embedding described in :ref:`demos_queens_embedding` as an example.
 
@@ -17,7 +17,7 @@ We have also added the following duple to create an inconsistet embedding, and i
 Basic use
 *********
 
-To execute the AMLDL Debugger:
+To execute the AML-DL Debugger:
 
 .. code-block:: bash
 
@@ -36,17 +36,17 @@ In this examples, when not specified, we call the embedding with dimension 8, sa
 
     python amlDebugger.py queens_embedding.py 8
 
-The AMLDL Debugger should welcome you with the following menu screen.
+The AML-DL Debugger should welcome you with the following menu screen.
 
-.. image:: img/debugger_menu.png
+.. image:: /rst/figures/demos/debugger_menu.png
    :width: 1002
-   :alt: AMLDL Debugger main menu
+   :alt: AML-DL Debugger main menu
    :align: center
 
 Expected format
 ===============
 
-The AMLDL Debugger expects a tuple with the names of the constants and the positive and negative duples.
+The AML-DL Debugger expects a tuple with the names of the constants and the positive and negative duples.
 The correct return can easily be achieved by ending your embedding function with the following lines:
 
 .. code-block:: python
@@ -61,13 +61,13 @@ The correct return can easily be achieved by ending your embedding function with
 Creating an embedding
 *********************
 
-The AMLDL Debugger can greatly help to build embeddings by displaying in a user-friendly manner the constants and duples resulting from AMLDL expressions.
+The AML-DL Debugger can greatly help to build embeddings by displaying in a user-friendly manner the constants and duples resulting from AML-DL expressions.
 This can be useful to detect errors early while creating embeddings.
 
-The suggested workflow is to build the minimum scaffold for an embedding, load it into the AMLDL Debugger, and then simply refresh it using the reload key `R` to display the changes on the embedding.
+The suggested workflow is to build the minimum scaffold for an embedding, load it into the AML-DL Debugger, and then simply refresh it using the reload key ``R`` to display the changes on the embedding.
 
 This code snippets can be used as a template for your embedding.
-The AMLDL Debugger can read it with no issue.
+The AML-DL Debugger can read it with no issue.
 
 .. code-block:: python
 
@@ -94,20 +94,20 @@ To build the embedding for the N-Queens completion problem, we start by defining
 
     CV("Q", boardDim * boardDim)
 
-After (R)eloading the embedding in the AMLDL Debugger, we can (I)nspect the embedding:
+After (R)eloading the embedding in the AML-DL Debugger, we can (I)nspect the embedding:
 
-.. image:: img/debugger_consts_1.png
+.. image:: /rst/figures/demos/debugger_consts_1.png
    :width: 1002
-   :alt: AMLDL Debugger displaying some constants while building the N-Queens embedding
+   :alt: AML-DL Debugger displaying some constants while building the N-Queens embedding
    :align: center
 
 We find the :math:`N^2` Queens, and no other constants or duples.
 
 After adding all constants and reloading the embedding we can see the following result:
 
-.. image:: img/debugger_consts_2.png
+.. image:: /rst/figures/demos/debugger_consts_2.png
    :width: 1002
-   :alt: AMLDL Debugger displaying all constants for the N-Queens embedding
+   :alt: AML-DL Debugger displaying all constants for the N-Queens embedding
    :align: center
 
 In this case, since the board dimension is a parameter, we can easily modify it and check how that affects at the resulting constants.
@@ -132,18 +132,18 @@ In a similar fashion we can start adding some duples:
     # C(j) !< {Qy!=j, E}
     ADD(EXC(T("C", _i), M(R("Q( ,y=)", T("Q( ,y=)", _i)), "E")))
 
-After reloading the embedding and using the inspector, we observe that :math:`N^2` positive duples have been created from the first AMLDL expression, and :math:`N` negative duples from each of the following two expressions.
+After reloading the embedding and using the inspector, we observe that :math:`N^2` positive duples have been created from the first AML-DL expression, and :math:`N` negative duples from each of the following two expressions.
 
-.. image:: img/debugger_duples_1.png
+.. image:: /rst/figures/demos/debugger_duples_1.png
    :width: 1247
-   :alt: AMLDL Debugger displaying some duples while building the N-Queens embedding
+   :alt: AML-DL Debugger displaying some duples while building the N-Queens embedding
    :align: center
 
 When adding all positive and negative duples (notice that we have added an additional negative duple), the full embedding results in:
 
-.. image:: img/debugger_duples_2.png
+.. image:: /rst/figures/demos/debugger_duples_2.png
    :width: 1247
-   :alt: AMLDL Debugger displaying all duples for the N-Queens embedding
+   :alt: AML-DL Debugger displaying all duples for the N-Queens embedding
    :align: center
 
 Debugging an embedding
@@ -159,11 +159,11 @@ When adding the following expression to the N-Queens embedding, it becomes incon
     theEmbedding.REGION = 14
     ADD(INC(F("Q", 4), F("E", 4)))
 
-The AMLDL Debugger shows the following output:
+The AML-DL Debugger shows the following output:
 
-.. image:: img/debugger_inconsistent.png
+.. image:: /rst/figures/demos/debugger_inconsistent.png
    :width: 1080
-   :alt: AMLDL Debugger displaying inconsistent duples in an embedding
+   :alt: AML-DL Debugger displaying inconsistent duples in an embedding
    :align: center
 
 As described in :ref:`demos_consistency_checker`, the issue is that the embedding imposes two contradictory conditions:
@@ -171,8 +171,8 @@ As described in :ref:`demos_consistency_checker`, the issue is that the embeddin
 
 By removing the expression in region 14 the embedding returns to be consistent and the consistency module displays a successful result.
 
-.. image:: img/debugger_consistent.png
+.. image:: /rst/figures/demos/debugger_consistent.png
    :width: 372
-   :alt: AMLDL Debugger displaying a succesful result for a consistent embedding
+   :alt: AML-DL Debugger displaying a succesful result for a consistent embedding
    :align: center
 

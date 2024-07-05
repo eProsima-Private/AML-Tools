@@ -6,12 +6,12 @@ Create an AML Embedding
 #######################
 
 In this section we describe step by step how to create an embedding.
-We illustrate the process by creating an embedding for the N-Queens Completion Problem.
+We illustrate the process by creating an embedding for the `N-Queens Completion Problem <https://github.com/eProsima-Private/AML-Tools/tree/main/resources/demos/queens_embedding.py>`.
 
-The amldl package provides all the functions needed to build an embedding.
+The ``amldl`` package provides all the functions needed to build an embedding.
 For the N-Queens Completion Problem we use the following functions:
 
-* **Descriptor**: object that represents the embedding. It works as a Python context manager. AMLDL functions only work within such context.
+* **Descriptor**: object that represents the embedding. It works as a Python context manager. AML-DL functions only work within such context.
 * **ADD**: commit a duple to the embedding.
 * **APP**: append an element to the end of a vector.
 * **C**: create a constants.
@@ -25,7 +25,7 @@ For the N-Queens Completion Problem we use the following functions:
 * **S**: create set from vector.
 * **T**: tensorial operations, it allows for compact for-like loops.
 
-.. image:: board_queens.png
+.. image:: /rst/figures/demos/board_queens.png
    :width: 250
    :alt: One of the solution to the 8-Queens completion problem
    :align: center
@@ -33,9 +33,9 @@ For the N-Queens Completion Problem we use the following functions:
 Structure
 *********
 
-Embedding contain two main sections.
+Embeddings contain two main sections: the definition of constants and the definition of duples.
 
-First, the definition of constants.
+Let's start with the definition of constants.
 These constants form the alphabet that we can use to describe our problem.
 The concepts they describe can be straightforward, e.g. there is a queen in cell (3,4).
 Or more abstract, such as *being a solution board* or *a column that has at least one queen*.
@@ -71,15 +71,15 @@ In the example below, we return just the duples and constants definitions, witho
 
             return
 
-Since vectors are one-dimensional in AMLDL, we make use of an auxiliary function to transform coordinates.
+Since vectors are one-dimensional in AML-DL, we make use of an auxiliary function to transform coordinates.
 This is just used for readability.
 
 Defining Constants
 ******************
 
-Constants are defined using the C command.
+Constants are defined using the ``C`` command.
 Vectors are used to organise related constants.
-And the CV command serves as a shortcut to create families of constants in the form of vectors.
+And the ``CV`` command serves as a shortcut to create families of constants in the form of vectors.
 
 .. code-block:: python
 
@@ -119,8 +119,8 @@ And the CV command serves as a shortcut to create families of constants in the f
 Defining Duples
 ***************
 
-The INC and EXC commands are used to create duples.
-These duples then need to be added to the embedding using the ADD command.
+The ``INC`` and ``EXC`` commands are used to create duples.
+These duples then need to be added to the embedding using the ``ADD`` command.
 
 .. code-block:: python
 
@@ -222,7 +222,7 @@ These duples then need to be added to the embedding using the ADD command.
 
 
 
-The T command can be complex to use and it can generally be expanded into a normal loop:
+The ``T`` command can be complex to use and it can generally be expanded into a normal loop:
 
 .. code-block:: python
 
@@ -231,11 +231,11 @@ The T command can be complex to use and it can generally be expanded into a norm
     term_left = T("R", _i)
     term_right = M(R("Q(x=, )", T("Q(x=, )", _i)), "E")
 
-The term on the left sets a loop over elements in the R term (representing active Rows)
+The term on the left sets a loop over elements in the `R` term (representing active Rows)
 
-The term on the right combines the result of an R command with the term E (all Empty cells).
-The R command removes from the Q(x=,) vector, the term at a certain position pointed by the T operator.
-Since both T's use the same index, they move alongside (as in a one-dimensional loop).
+The term on the right combines the result of an ``R`` command with the term `E` (all Empty cells).
+The ``R`` command removes from the `Q(x=,)` vector, the term at a certain position pointed by the ``T`` operator.
+Since both ``T``'s use the same index, they move alongside (as in a one-dimensional loop).
 If different indices were to be used, it would result in a double loop.
 
 This translates into the following expression:
