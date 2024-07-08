@@ -59,6 +59,18 @@
    /rst/tutorials/aml_ip_collaborative_learning
    /rst/tutorials/aml_ip_workload_distribution
 
+.. _index_demos:
+
+.. toctree::
+   :caption: Demos
+   :maxdepth: 2
+   :numbered: 5
+   :hidden:
+
+   /rst/demos/queens_embedding
+   /rst/demos/consistency_checker
+   /rst/demos/debugger
+
 .. _index_notes:
 
 .. toctree::
