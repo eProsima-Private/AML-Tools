@@ -4,13 +4,13 @@
 
 <div class="menu" align="center">
     <strong>
-        <a href="https://eprosima.com/index.php/downloads-all">Download</a>
+        <a href="https://aml-tools.readthedocs.io/en/latest/#get-access-to-aml-toolkit">Download</a>
         <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
         <a href="https://aml-tools.readthedocs.io/en/latest">Docs</a>
         <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
         <a href="https://alma-ai.eu/showroom/news">News</a>
         <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <a href="https://twitter.com/EProsima">Twitter</a>
+        <a href="https://x.com/AlgebraicAi">Twitter</a>
         <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
         <a href="mailto:info@algebraic.ai">Contact Us</a>
     </strong>
