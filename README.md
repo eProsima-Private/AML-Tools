@@ -1,4 +1,22 @@
-# AML Toolkit
+[![AML Toolkit](docs/rst/figures/banner_aml_toolkit.png)](https://alma-ai.eu/)
+
+<br>
+
+<div class="menu" align="center">
+    <strong>
+        <a href="https://eprosima.com/index.php/downloads-all">Download</a>
+        <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <a href="https://aml-tools.readthedocs.io/en/latest">Docs</a>
+        <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <a href="https://alma-ai.eu/showroom/news">News</a>
+        <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <a href="https://twitter.com/EProsima">Twitter</a>
+        <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <a href="mailto:info@algebraic.ai">Contact Us</a>
+    </strong>
+</div>
+
+<br><br>
 
 *AML Toolkit* is a set of software tools that allows users to develop, train, and deploy Algebraic Machine Learning (AML) models.
 These tools are designed to be used by researchers, developers, and industry professionals who want to implement AML models in their applications.
