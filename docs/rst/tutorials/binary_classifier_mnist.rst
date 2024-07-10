@@ -2,20 +2,23 @@
 
 .. _tutorials_aml_pipeline:
 
-AML Pipeline
-############
+MNIST binary classifier with AML
+################################
 
-You can request this Jupyter notebook and AML libraries in :ref:`Get access to AML Toolkit <get_access_toolkit>`.
+This tutorial illustrates the use of AML by following a real example from preprocessing the dataset to performing inference.
+We have chosen to use the MNIST dataset for handwritten digits.
+In this tutorial we focus on binary classification of ``0`` against any other digit.
+The dataset is used as is, and we do not introduce any prior knowledge (image augmetation, convolutional neural networks, etc).
 
+You can request this tutorial as a Jupyter notebook and the AML libraries in :ref:`Get access to AML Toolkit <get_access_toolkit>`.
 
-Running a binary classifer with MNIST
-*************************************
 
 Load AML libraries
-==================
+******************
 
 Most functionality to work with AML can be found in two packages:
-- ``aml_engine.amlSimpleLibrary`` contains functions and classes to create and manipulate AML models,
+
+- ``aml_engine.amlSimpleLibrary`` contains functions and classes to create and manipulate AML models.
 - ``aml_engine.amlAuxiliaryLibrary`` contains functions and classes specific for training.
 
 
@@ -25,7 +28,7 @@ Most functionality to work with AML can be found in two packages:
     from aml_engine import amlAuxiliaryLibrary as ql
 
 Load MNIST dataset
-==================
+******************
 
 The original dataset files:
 
@@ -34,22 +37,22 @@ The original dataset files:
 - ``train-images-idx3-ubyte``
 - ``train-labels-idx1-ubyte``
 
-The dataset can be downloaded from:
-http://yann.lecun.com/exdb/mnist/
-and
-https://huggingface.co/datasets/ylecun/mnist
+The dataset can be downloaded from
+`Yann Lecun MNIST database <http://yann.lecun.com/exdb/mnist/>`__
+or
+`Huggingface <https://huggingface.co/datasets/ylecun/mnist>`__.
 
+The ``mnistGenerator`` searches and loads the datasets and provides functionality to load individual digits.
 
 .. code-block:: python
 
     from MNIST import mnistGenerator
 
-The ``mnistGenerator`` searches and loads the datasets and provides functionality to load individual digits.
-
 Embedding constants
-===================
+*******************
 
 A simple embedding for black and white images:
+
 - constants for each black pixel `B(i,j)` (height x width),
 - constants for each white pixel `W(i,j)` (height x width),
 - constants for each label (10 if using all digits).
@@ -57,7 +60,8 @@ A simple embedding for black and white images:
 For instance, with 2x2 images the embedding set would be
 ``[B(1,1), B(1,2), B(2,1), B(2,2), W(1,1), W(1,2), W(2,1), W(2,2), label(1), label(2), ...]``
 
-### Embedding function
+Embedding function
+==================
 
 We can use the following function to embed MNIST images.
 
@@ -86,8 +90,10 @@ For instance:
         result = set(ret)
         return result
 
+.. _tutorials_aml_pipeline_embedding_functions:
+
 Functions to read examples and embed them as constants
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================================
 
 These functions load images and embed them.
 
@@ -109,11 +115,17 @@ These functions load images and embed them.
         return sc.amlset(result)
 
 Training
-========
+********
 
 Training parameters
-^^^^^^^^^^^^^^^^^^^
+===================
 
+First, we describe the parameters for training the model.
+Notice that AML uses hardly any hyperparameter, essentially only the mini batch size.
+
+Since this example is a binary classifier for MNIST, we pick one single target digit.
+The model will discriminate between that digit (positive class), and the rest.
+It is also possible, with minor modifications, to use this script for the multiclass problem.
 
 .. code-block:: python
 
@@ -133,14 +145,11 @@ Training parameters
     maxPTrainingExamples = 6000
     maxNTrainingExamples = 54000
 
-Notice that we are picking one target digit.
-The model will discriminate between that digit (positive class), and the rest.
-It is also possible to slightly modify this script for the multiclass problem.
-
 Model and batch trainer initialisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================
 
 Initialise the ``model`` object that contains:
+
 - the ``atomization``, which is the model itself,
 - the ``cmanager`` or constant manager, which contains information describing the constants (indices, names, etc).
 
@@ -177,7 +186,7 @@ Check the Algebraic Machine Learning paper for a detailed explanation (https://a
     batchLearner.params.staticConstants = True
 
 Training loop
-^^^^^^^^^^^^^
+=============
 
 .. code-block:: python
 
@@ -335,11 +344,11 @@ Below you can see the output of iteration 948.
 
 
 Postprocessing
-==============
+**************
 
-Here you can explore the atomization in the last model: `model.atomization`
+Here you can explore the atomization in the last model: `model.atomization`.
 
-But also the cumulative model that has been built combining the atomizations across the whole training process: `batchLearner.unionModel`
+But also the cumulative model that has been built combining the atomizations across the whole training process: `batchLearner.unionModel`.
 
 
 .. code-block:: python
@@ -358,7 +367,13 @@ But also the cumulative model that has been built combining the atomizations acr
     print(batchLearner.unionModel[0].ucs)
 
 
-This displays the following information::
+This shows information about the size of the model, for instance we expect both the union model and the atomization to grow rapidly in the initial phases of training and then plateau as we reach convergence.
+We can also display the size spectrum, that reports the number of atoms for each size.
+Initially, atoms are small and grow/mature with the number of batches.
+On the other hand, when the model finds patterns and is able to generalise, atoms tend to stabilise around an intermediate size.
+Very large atoms are generally caused by special cases, outliers or mislabels.
+
+The above code block displays the following information::
 
     Union model size: 10409
     Size spectrum:
@@ -422,7 +437,7 @@ This displays the following information::
 
 
 Plotting results
-^^^^^^^^^^^^^^^^
+================
 
 For classification problems with square images the viewer module provides some functions to plot atoms.
 It simply maps back constant indices to their position and color on an image.
@@ -450,3 +465,71 @@ Black and white pixels indicate that the constant is present in the atom; red, t
    :alt: A hundred atoms from the atomization of MNIST.
    :align: center
 
+
+Inference
+=========
+
+To perform inference in AML we first build a duple,
+and then we ask the model whether that duple is positive or not.
+
+The following functions perform the embedding of images from the test dataset.
+They read the samples from the dataset and transform them into sets of constants.
+These are the same functions as in :ref:`tutorials_aml_pipeline_embedding_functions`,
+but the ``typeOfDataset`` argument is set to ``0`` to pull samples from the test dataset:
+
+- ``typeOfDataset = 0``: test
+- ``typeOfDataset = 1``: training (default)
+- ``typeOfDataset = 2``: validation
+
+.. code-block:: python
+
+    # typeOfDataset = 0 (Test), 1 (Training), 2 (Validation)
+    def mnistDigitTest(targetDigit, size):
+        d, label, i = MNIST_GENERATOR.getNextDigit(targetDigit, False, typeOfDataset=0)
+        result = digitToConstants(d, size)
+        return sc.amlset(result)
+    def mnistOtherDigitTest(targetDigit, size):
+        d, label, i = MNIST_GENERATOR.getNextDigit(targetDigit, True, typeOfDataset=0)
+        result = digitToConstants(d, size)
+        return sc.amlset(result)
+
+
+To ask the model whether a duple is positive or negative, we check the atoms from its terms.
+When a duple :math:`T_L < T_R` is in the model then all atoms in `T_L` are also part of `T_R`. In that case we say that there are no missing atoms, or no misses.
+If on the other hand, many atoms are missing, then the duple is not present in the model.
+
+The following function computes the atoms that are present in `T_L` but are missing in `T_R` of a duple.
+
+.. code-block:: python
+
+    def computeMisses(leftTerm, rightTerm, atomization):
+        atomsInLeftTerm = sc.atomsIn(atomization, leftTerm)
+        atomsMissingInRight = sc.atomsNotIn(atomsInLeftTerm, rightTerm)
+        return atomsMissingInRight
+
+Finally, using the above functions we can compute the number of missing atoms from a set of positive and negative examples.
+
+.. code-block:: python
+
+    positiveExampleTerm = [mnistDigitTest(targetDigit, gridSideLength) for _ in range(10)]
+    negativeExampleTerm = [mnistOtherDigitTest(targetDigit, gridSideLength) for _ in range(10)]
+
+    missesPositiveExamples = [computeMisses(vTerm, ex, model.atomization) for ex in positiveExampleTerm]
+    missesNegativeExamples = [computeMisses(vTerm, ex, model.atomization) for ex in negativeExampleTerm]
+
+    print("Positive Class:")
+    print([len(misses) for misses in missesPositiveExamples])
+    print("Negative Class:")
+    print([len(misses) for misses in missesNegativeExamples])
+
+The result for a random subset of samples::
+
+    Positive Class:
+    [0, 0, 0, 0, 4, 2, 0, 0, 0, 0]
+    Negative Class:
+    [26, 9, 16, 18, 10, 15, 13, 15, 8, 24]
+
+Since the model is not perfect, there is a region of uncertainty where some positive
+duples may miss some atoms, or some negative duples might have a surpringly low number of misses.
+
+A way to set that threshold is to compute the number of misses in the validation dataset, and choose a value that minimises the false positive rate and false negative rate.
