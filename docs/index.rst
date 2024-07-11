@@ -55,7 +55,7 @@
    :numbered: 5
    :hidden:
 
-   /rst/tutorials/aml_pipeline
+   /rst/tutorials/binary_classifier_mnist.rst
    /rst/tutorials/aml_ip_collaborative_learning
    /rst/tutorials/aml_ip_workload_distribution
 
