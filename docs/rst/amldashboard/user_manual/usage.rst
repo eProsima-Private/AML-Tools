@@ -117,9 +117,12 @@ Data Management Tab
 To create a dataset, simply follow these steps:
 
 1. Activate the ``video`` switch in the webcam section to enable webcam capture.
+
 2. Specify the label of the dataset in the *Instance label* section.
+
 3. Click on the ``Hold to record instances`` button in the *Capture instances to the training set* to start recording instances.
-3. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
+
+4. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
 
 .. figure:: /rst/figures/amldashboard/data_management.png
 
@@ -129,9 +132,13 @@ Training Tab
 To train a model using |aml|, follow these steps:
 
 1. Specify the number of parallel trainings (executions) you wish to run.
+
 2. Define the number of iterations per execution.
+
 3. Set the percentage of dataset to distribute in each execution.
+
 4. Click on the ``Train`` button in the *AML Training Launcher* to initiate the training process.
+
 5. Once the training is completed, the model status will appear as **Finished :)** in the *AML Status*.
 
 * Please ensure that at least one **Computing Node** is running to facilitate the training process.
@@ -144,8 +151,11 @@ Fetching Tab
 To fetch a model, follow these steps:
 
 1. Click on the ``Search for statistics`` button in the *AML Statistics Fetcher*.
+
 2. Once the statistics are received, the status will appear as **Statistics received !** in the *AML Collaborative Learning Status*.
+
 3. Click on the ``Request model`` button in the *AML Model Fetcher*.
+
 4. Once the model is received, the status will change to **Model received !** in the *AML Collaborative Learning Status*.
 
 * Make sure that at least one **Model Manager Sender Node** is running to facilitate the model fetching process.
@@ -158,6 +168,7 @@ Batch Prediction Tab
 To predict the output of a dataset, follow these steps:
 
 1. Click on the ``Update predictions`` button in the *Algebraic Machine Learning*.
+
 2. The predictions will be displayed in the Results *Algebraic Machine Learning* plot.
 
 * Ensure that you have access to at least one |aml| Model to facilitate the batch prediction process.
@@ -170,11 +181,35 @@ Real-Time Prediction Tab
 To predict the output of webcam images in real^time using an |aml| Model, follow these steps:
 
 1. Toggle the ``prediction`` switch in the *Predict for AML* section and activate the ``video`` switch in the webcam section.
+
 2. The predictions will be displayed in the *Results AML* plot.
 
 * Ensure that you have access to at least one |aml| Model to facilitate the real^time prediction process.
 
 .. figure:: /rst/figures/amldashboard/real_time_prediction.png
+
+Context Broker Tab
+^^^^^^^^^^^^^^^^^^
+
+To create and update data to the Context Broker and get the solution (inference) from the |aml| Model, follow these steps:
+
+1. Specify the Fiware Node parameters and Context Broker entity ID and attributes.
+
+2. Click on the ``Create`` button to create the node using the provided parameters.
+
+3. The *Fiware Node Status* will update to indicate whether the node has been created successfully.
+
+4. Drag and drop an image or upload a file in the designated area to upload data.
+
+5. Click the ``Post Data`` button to send the data to the Context Broker.
+
+6. The *Data Status* will update to indicate whether the data has been successfully posted.
+
+7. Once the solution is received, it will be displayed in the *Context Broker Solution* section and the *Solution Status* will update to **Solution received !** to indicate successful retrieval.
+
+* Make sure that the Context Broker is running to ensure successful interaction and data exchange.
+
+.. figure:: /rst/figures/amldashboard/context_broker.png
 
 Status Tab
 ^^^^^^^^^^
