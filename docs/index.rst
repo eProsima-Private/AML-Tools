@@ -21,8 +21,8 @@
    :numbered: 5
    :hidden:
 
-   Linux </rst/installation/linux.rst>
-   Docker Image </rst/installation/docker.rst>
+   Linux </rst/installation/linux/linux.rst>
+   Docker Image </rst/installation/docker/docker.rst>
 
 .. _index_amldl:
 
@@ -46,6 +46,20 @@
    :hidden:
 
    /rst/amlip/specification/amlip
+   /rst/amlip/user_manual/user_manual
+
+.. _index_amldashboard:
+
+.. toctree::
+   :caption: AML Dashboard
+   :maxdepth: 2
+   :numbered: 5
+   :hidden:
+
+   /rst/amldashboard/specification/amldashboard
+   /rst/amldashboard/user_manual/interfaces
+   /rst/amldashboard/user_manual/usage
+   /rst/amldashboard/use_cases/use_cases
 
 .. _index_tutorials:
 
