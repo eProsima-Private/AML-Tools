@@ -126,6 +126,8 @@ To create a dataset, simply follow these steps:
 
 .. figure:: /rst/figures/amldashboard/data_management.png
 
+.. _aml_dashboard_training:
+
 Training Tab
 ^^^^^^^^^^^^
 
