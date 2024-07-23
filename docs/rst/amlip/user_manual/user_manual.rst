@@ -73,6 +73,9 @@ For more information, check the AML-IP Nodes sections:
   It sends out statistics about the models it manages using :code:`publish_statistics`, then waits for incoming requests for specific models serialized as Model Request Data Type.
   Upon receiving a request, it executes a user-defined callback function :code:`fetch_model` to generate and return the requested model as Model Reply Data Type.
   This node facilitates collaborative model sharing across distributed systems, enabling efficient and secure model exchange without sharing underlying training data.
+* `Fiware Node <https://aml-ip.readthedocs.io/en/latest/rst/user_manual/nodes/fiware.html>`__: integrates with a FIWARE context broker to handle inference data, bridging data retrieval, inference requests, and posting results back to the broker.
+  It reads data from a context broker entity, requests inference from an Inference Node, and posts the inference result back to the context broker.
+  It includes an Edge Node to facilitate inference requests.
 
 .. _amlip_tools:
 
