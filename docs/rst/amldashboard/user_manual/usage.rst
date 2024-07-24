@@ -126,7 +126,7 @@ To create a dataset, simply follow these steps:
 
 .. figure:: /rst/figures/amldashboard/data_management.png
 
-.. _aml_dashboard_training:
+.. _amldashboard_training:
 
 Training Tab
 ^^^^^^^^^^^^
@@ -146,6 +146,8 @@ To train a model using |aml|, follow these steps:
 * Please ensure that at least one **Computing Node** is running to facilitate the training process.
 
 .. figure:: /rst/figures/amldashboard/training.png
+
+.. _amldashboard_fetching:
 
 Fetching Tab
 ^^^^^^^^^^^^

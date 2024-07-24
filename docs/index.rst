@@ -73,6 +73,7 @@
    /rst/tutorials/aml_ip_collaborative_learning
    /rst/tutorials/aml_ip_workload_distribution
    /rst/tutorials/dashboard_train
+   /rst/tutorials/dashboard_fetch
 
 .. _index_demos:
 
