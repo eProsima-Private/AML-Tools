@@ -130,7 +130,7 @@ To create a dataset, simply follow these steps:
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_data_management.png
 
-.. _aml_dashboard_training:
+.. _amldashboard_training:
 
 Training Tab
 ^^^^^^^^^^^^
@@ -153,6 +153,8 @@ To train a model using |aml|, follow these steps:
 6. If the training process fails, an error message will be displayed indicating the reason for the failure.
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_trained.png
+
+.. _amldashboard_fetching:
 
 Fetching Tab
 ^^^^^^^^^^^^
