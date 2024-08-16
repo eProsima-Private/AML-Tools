@@ -33,6 +33,7 @@ The first screen comprises five distinct areas that enable users to swiftly crea
     :align: center
     :width: 100
 
+.. _amldashboard_interfaces_training:
 
 Training
 ========
@@ -58,6 +59,8 @@ It is divided in two sections:
 .. figure:: /rst/figures/amldashboard/aml-dashboard_trained.png
     :align: center
     :width: 100
+
+.. _amldashboard_interfaces_fetching:
 
 Fetching
 ========
@@ -149,6 +152,8 @@ Create and update data in the Context Broker and receive solutions (inferences) 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_context_broker_created.png
     :align: center
     :width: 100
+
+.. _amldashboard_interfaces_debugging:
 
 Status
 ======

@@ -26,7 +26,7 @@ Ensure you have installed the *AML Dashboard* using one of the following methods
 - :ref:`Linux Installation <amldashboard_linux>`
 - :ref:`Docker Image Installation <amldashboard_docker>`
 
-For more information, check the :ref:`AML Dashboard Usage <amldashboard_training>` section.
+For more information, check the :ref:`AML Dashboard Interfaces <amldashboard_interfaces_training>` and :ref:`AML Dashboard Usage <amldashboard_usage_training>` sections.
 
 Running the demo
 ================

@@ -74,6 +74,7 @@
    /rst/tutorials/aml_ip_workload_distribution
    /rst/tutorials/dashboard_train
    /rst/tutorials/dashboard_fetch
+   /rst/tutorials/dashboard_debugger
 
 .. _index_demos:
 

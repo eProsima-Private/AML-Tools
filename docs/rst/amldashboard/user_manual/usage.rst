@@ -130,7 +130,7 @@ To create a dataset, simply follow these steps:
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_data_management.png
 
-.. _amldashboard_training:
+.. _amldashboard_usage_training:
 
 Training Tab
 ^^^^^^^^^^^^
@@ -154,7 +154,7 @@ To train a model using |aml|, follow these steps:
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_trained.png
 
-.. _amldashboard_fetching:
+.. _amldashboard_usage_fetching:
 
 Fetching Tab
 ^^^^^^^^^^^^
@@ -233,6 +233,8 @@ To create and update data to the Context Broker and get the solution (inference)
 8. If the solution retrieval process fails, an error message will be displayed indicating an error.
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_context_broker_created.png
+
+.. _amldashboard_usage_debugging:
 
 Status Tab
 ^^^^^^^^^^
