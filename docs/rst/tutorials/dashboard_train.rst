@@ -119,7 +119,14 @@ To train a model using the |aml| Dashboard, follow these steps:
 
 .. raw:: html
 
-   <video width=100% height=auto autoplay loop controls muted>
+   <video id=myVideo width=100% height=auto autoplay loop controls muted>
       <source src="../../_static/resources/tutorials/dashboard_train.mp4">
       Your browser does not support the video tag.
    </video>
+
+   <script>
+      // Set the speed of the video once the page is loaded
+      window.onload = function() {
+         document.getElementById('myVideo').playbackRate = 1.0; // Set speed to 1.0x
+      };
+   </script>
