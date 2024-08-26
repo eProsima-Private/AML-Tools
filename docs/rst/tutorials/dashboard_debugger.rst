@@ -96,7 +96,6 @@ If no modifications have been made, these three nodes should be visible in the t
 .. raw:: html
 
    <video width=100% height=auto autoplay loop controls muted>
-        <source src="../_static/resources/tutorials/dashboard_status.mp4">
-        Your browser does not support the video tag.
-    </video>
-    <br></br>
+      <source src="../../_static/resources/tutorials/dashboard_status.mp4">
+      Your browser does not support the video tag.
+   </video>
