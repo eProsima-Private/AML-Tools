@@ -124,12 +124,19 @@ To create a dataset, simply follow these steps:
 
 4. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
 
+.. note::
+
+   In order to be able to train a model, you must have at least two classes in the dataset.
+
 .. figure:: /rst/figures/amldashboard/data_management.png
 
 Training Tab
 ^^^^^^^^^^^^
 
 To train a model using |aml|, follow these steps:
+
+.. note::
+   Please ensure that at least one **Computing Node** is running to facilitate the training process.
 
 1. Specify the number of parallel trainings (executions) you wish to run.
 
@@ -141,7 +148,7 @@ To train a model using |aml|, follow these steps:
 
 5. Once the training is completed, the model status will appear as **Finished :)** in the *AML Status*.
 
-* Please ensure that at least one **Computing Node** is running to facilitate the training process.
+6. If the training process fails, an error message will be displayed indicating the reason for the failure.
 
 .. figure:: /rst/figures/amldashboard/training.png
 
@@ -149,6 +156,10 @@ Fetching Tab
 ^^^^^^^^^^^^
 
 To fetch a model, follow these steps:
+
+.. note::
+
+   Make sure that at least one **Model Manager Sender Node** is running to facilitate the model fetching process.
 
 1. Click on the ``Search for statistics`` button in the *AML Statistics Fetcher*.
 
@@ -158,7 +169,7 @@ To fetch a model, follow these steps:
 
 4. Once the model is received, the status will change to **Model received !** in the *AML Collaborative Learning Status*.
 
-* Make sure that at least one **Model Manager Sender Node** is running to facilitate the model fetching process.
+5. If the fetching process fails, an error message will be displayed indicating an error.
 
 .. figure:: /rst/figures/amldashboard/fetching.png
 
@@ -167,11 +178,13 @@ Batch Prediction Tab
 
 To predict the output of a dataset, follow these steps:
 
+.. note::
+
+   Ensure that you have access to at least one |aml| Model to facilitate the batch prediction process.
+
 1. Click on the ``Update predictions`` button in the *Algebraic Machine Learning*.
 
 2. The predictions will be displayed in the Results *Algebraic Machine Learning* plot.
-
-* Ensure that you have access to at least one |aml| Model to facilitate the batch prediction process.
 
 .. figure:: /rst/figures/amldashboard/batch_prediction.png
 
@@ -180,11 +193,13 @@ Real-Time Prediction Tab
 
 To predict the output of webcam images in real^time using an |aml| Model, follow these steps:
 
+.. note::
+
+   Ensure that you have access to at least one |aml| Model to facilitate the real^time prediction process.
+
 1. Toggle the ``prediction`` switch in the *Predict for AML* section and activate the ``video`` switch in the webcam section.
 
 2. The predictions will be displayed in the *Results AML* plot.
-
-* Ensure that you have access to at least one |aml| Model to facilitate the real^time prediction process.
 
 .. figure:: /rst/figures/amldashboard/real_time_prediction.png
 
@@ -192,6 +207,10 @@ Context Broker Tab
 ^^^^^^^^^^^^^^^^^^
 
 To create and update data to the Context Broker and get the solution (inference) from the |aml| Model, follow these steps:
+
+.. note::
+
+   Make sure that the Context Broker is running to ensure successful interaction and data exchange. The Context Broker can be installed and configured as per instructions provided `here <https://github.com/telefonicaid/fiware-orion/blob/master/docker/README.md#1-the-fastest-way>`__.
 
 1. Specify the Fiware Node parameters and Context Broker entity ID and attributes.
 
@@ -207,7 +226,7 @@ To create and update data to the Context Broker and get the solution (inference)
 
 7. Once the solution is received, it will be displayed in the *Context Broker Solution* section and the *Solution Status* will update to **Solution received !** to indicate successful retrieval.
 
-* Make sure that the Context Broker is running to ensure successful interaction and data exchange.
+8. If the solution retrieval process fails, an error message will be displayed indicating an error.
 
 .. figure:: /rst/figures/amldashboard/context_broker.png
 

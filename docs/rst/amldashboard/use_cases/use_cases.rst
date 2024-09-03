@@ -7,10 +7,16 @@
 Use Cases
 #########
 
-*AML Dashboard* addresses two primary use cases, catering to different audiences and purposes: creative professionals exploring sound variations and computer scientists exploring and developing new applications using |aml|.
+.. warning::
+
+   The mentioned implementation is a work in progress and is not yet available in the current version of *AML Dashboard*.
+
+*AML Dashboard* addresses two primary use cases, catering to different audiences and purposes: creative professionals exploring sound variations in order to enhance creativity and create unique sound experiences; and computer scientists exploring and developing new applications using |aml| needing a practical tool to to asses the efficiency of the |aml| algorithm.
+
+.. _aml_sound_exploration: 
 
 Exploring Sound Variations with *AML Dashboard*
-===========================================
+===============================================
 
 Emilie is a musician who uses *AML Dashboard* to experiment with different instruments and create new sound patterns for an upcoming project.
 She uses the camera to record her hand gestures, which are projected as a skeleton on the screen.
@@ -20,12 +26,14 @@ Steps Emilie follows:
 
 1. **Gesture Recording**: She moves her hands in front of the camera and records gestures for different instruments.
 
-2. **Model Training**: She selects ``train`` to use these gestures to generate sound patterns, and a loading bar shows the training progress.
+2. **Model Training**: She trains an AML model using the recorded gestures to generate sound patterns, and the training progress is shown by a loading bar.
 
 3. **Sound Manipulation**: Emilie tests the system by repeating the gestures and listening to the sounds.
    The system allows her to manipulate tempo, pitch, and volume by varying her hand movements.
 
-4. **Refinement**: Noticing difficulties with her piano gesture, she returns to the training page, deletes the problematic images, records new gestures, and retrains the model to improve the sound quality.
+4. **Refinement**: Noticing difficulties with the generated results, she returns to the training page, deletes the images with the problematic gestures, records new ones, and retrains the model to improve the sound quality.
+
+.. _aml_comparison_exploring_exploration: 
 
 Exploring and Comparing the Potential of AML using *AML Dashboard*
 =============================================================

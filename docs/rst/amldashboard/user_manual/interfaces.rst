@@ -26,21 +26,21 @@ The first screen comprises five distinct areas that enable users to swiftly crea
 2. **Collecting Data**: Users can create their own data sets to train an |aml| model.
    A drop-down menu allows the selection of one out of four musical instruments for demonstration purposes.
 
-3. **Data Set Overview**: Each collected image is displayed in a data set overview, where users can explore, move, or delete images in the training stack.
+3. **Data Set Browser**: Each collected image is displayed in a data set browser, where users can explore, move, or delete images in the training stack, as well as managing labels of the different classes.
    This feature is crucial for iterative training, enabling users to remove or add new labeled data to improve the |aml| algorithm as needed.
 
 Training
 ========
 
-The training page is separate from the data collection page to educate users on the various stages of the :term:`ML` life-cycle.
+The Training page is separated from the Data Collection page to educate users on the various stages of the :term:`ML` life-cycle.
 
-It is divided into two sections:
+It is divided in two sections:
 
 1. **AML Model Training Information (Left Side)**:
 
-   - **Training Information**: Users can set parameters such as the number of iterations.
+   - **Training Information**: Users can set parameters such as the number of iterations or the percentage of data used for each execution.
 
-   - **Training Visualization**: Displays the current state of training.
+   - **Training Status**: Displays the current state of training.
 
 2. **Comparison Model Training (Right Side)**:
 
@@ -53,7 +53,7 @@ It is divided into two sections:
 Fetching
 ========
 
-Retrieve trained |aml| statistics and Models effortlessly.
+This interface's purpose is to retrieve trained |aml| statistics and Models effortlessly.
 It includes options to search for |aml| statistics and request an |aml| model.
 
 It is divided into the following sections:
@@ -73,7 +73,7 @@ It is divided into the following sections:
    - **Model Display**: Display the fetched model.
 
 Explore Models
-==============
+=================================
 
 The model exploration interface provides space for developers to add any desired model comparison matrix.
 The Marcelle framework supports various comparison modules and allows users to create custom :term:`GUI` elements for specific calculations.
@@ -82,8 +82,8 @@ In the current setup, a confusion matrix is provided based on the trained model.
 Users must actively trigger the update of the matrix, facilitating a clear before-and-after comparison.
 Future work aims to extend this section with more targeted visualizations utilizing the |aml| output structure.
 
-Music Exploration
-=================
+Real Time Pattern Exploration
+========================================
 
 After training the models, users can move to the music exploration tab.
 This part of *AML Dashboard* allows users to explore music patterns using the self-trained models.
@@ -119,7 +119,7 @@ Create and update data in the Context Broker and receive solutions (inferences) 
 
    - **Post Data Button**: Send the data to the Context Broker.
 
-   - **Data Status**: Indicates whether the data has been successfully posted.
+   - **Data Status**: Indicates whether the data has been successfully loaded and posted.
 
    - **Solution Display**: Displays the solution received from the Context Broker, which is the inference received from the |aml| model after processing the data.
 
