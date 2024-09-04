@@ -111,6 +111,8 @@ With the *AML Dashboard* up and running, you can access it at the following addr
 
    http://localhost:5173/
 
+.. _amldashboard_usage_data_management:
+
 Data Management Tab
 ^^^^^^^^^^^^^^^^^^^
 
@@ -176,6 +178,8 @@ To fetch a model, follow these steps:
 5. If the fetching process fails, an error message will be displayed indicating an error.
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_fetched.png
+
+.. _amldashboard_usage_evaluation:
 
 Batch Prediction Tab
 ^^^^^^^^^^^^^^^^^^^^
