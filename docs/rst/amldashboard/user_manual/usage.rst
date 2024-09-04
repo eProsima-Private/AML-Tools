@@ -128,7 +128,7 @@ To create a dataset, simply follow these steps:
 
    In order to be able to train a model, you must have at least two classes in the dataset.
 
-.. figure:: /rst/figures/amldashboard/data_management.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_data_management.png
 
 Training Tab
 ^^^^^^^^^^^^
@@ -150,7 +150,7 @@ To train a model using |aml|, follow these steps:
 
 6. If the training process fails, an error message will be displayed indicating the reason for the failure.
 
-.. figure:: /rst/figures/amldashboard/training.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_trained.png
 
 Fetching Tab
 ^^^^^^^^^^^^
@@ -171,7 +171,7 @@ To fetch a model, follow these steps:
 
 5. If the fetching process fails, an error message will be displayed indicating an error.
 
-.. figure:: /rst/figures/amldashboard/fetching.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_fetched.png
 
 Batch Prediction Tab
 ^^^^^^^^^^^^^^^^^^^^
@@ -186,7 +186,7 @@ To predict the output of a dataset, follow these steps:
 
 2. The predictions will be displayed in the Results *Algebraic Machine Learning* plot.
 
-.. figure:: /rst/figures/amldashboard/batch_prediction.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_batch_prediction_done.png
 
 Real-Time Prediction Tab
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -201,7 +201,7 @@ To predict the output of webcam images in real^time using an |aml| Model, follow
 
 2. The predictions will be displayed in the *Results AML* plot.
 
-.. figure:: /rst/figures/amldashboard/real_time_prediction.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_real_time_done.png
 
 Context Broker Tab
 ^^^^^^^^^^^^^^^^^^
@@ -210,7 +210,7 @@ To create and update data to the Context Broker and get the solution (inference)
 
 .. note::
 
-   Make sure that the Context Broker is running to ensure successful interaction and data exchange. The Context Broker can be installed and configured as per instructions provided `here <https://github.com/telefonicaid/fiware-orion/blob/master/docker/README.md#1-the-fastest-way>`__.
+   Make sure that the Context Broker is running to ensure successful interaction and data exchange. The Context Broker can be installed and configured by following the instructions provided `here <https://github.com/telefonicaid/fiware-orion/blob/master/docker/README.md#1-the-fastest-way>`__.
 
 1. Specify the Fiware Node parameters and Context Broker entity ID and attributes.
 
@@ -228,11 +228,11 @@ To create and update data to the Context Broker and get the solution (inference)
 
 8. If the solution retrieval process fails, an error message will be displayed indicating an error.
 
-.. figure:: /rst/figures/amldashboard/context_broker.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_context_broker_created.png
 
 Status Tab
 ^^^^^^^^^^
 
 The status tab automatically refreshes every second, ensuring you receive real-time updates and information about the network's status.
 
-.. figure:: /rst/figures/amldashboard/status.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_status_nodes_created.png

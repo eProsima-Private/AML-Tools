@@ -23,22 +23,18 @@ If |amlip| is not already installed in your system, follow the installation inst
 Python dependencies
 ^^^^^^^^^^^^^^^^^^^
 
-Ensure you have **python3.11** installed together with the packages listed in the ``requirements.txt`` file. If not, install them using the following command:
-Ensure you have python3.11 intsalled together with the packages listed in the requirements.txt file. If not, install them using the following command:  
+Ensure you have **Python3.11** installed together with the packages listed in the `requirements.txt <https://github.com/eProsima-Private/AML-Dashboard/main/requirements.txt>`__ file. If not, install them using the following commands: 
 
 .. code-block:: bash
-    curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
-
-    #To activate the conda environment automatically when opening shell. For changes to take effect, close and re-open current shell.
-    bash Miniconda3-latest-Linux-x86_64.sh
-
-    #To activate the conda environment manually each time you open the shell:
-    eval "$(/home/user/miniconda3/bin/conda shell.zsh hook)" 
-
-    conda create --name aml-ip-venv python=3.11
-    conda activate aml-ip-venv
-    cd AML-Dashboard
+    
+    python3 -m venv fastdds-docs-venv
+    source fastdds-docs-venv/bin/activate
+    wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/main/requirements.txt
     pip3 install -r requirements.txt
+
+.. note:: 
+
+    `pipx <https://pipx.pypa.io/stable/>`__ can also be used for users who prefer that as an alternative for managing Python packages in isolated environments.
 
 Context Broker
 ^^^^^^^^^^^^^^^
