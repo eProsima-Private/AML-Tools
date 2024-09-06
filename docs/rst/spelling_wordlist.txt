@@ -26,6 +26,7 @@ executables
 fastcdr
 fastdds
 fastrtps
+fiware
 Foonathan
 Foxglove
 github

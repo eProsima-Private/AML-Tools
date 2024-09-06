@@ -1,0 +1,71 @@
+.. include:: /rst/exports/alias.include
+.. include:: /rst/exports/roles.include
+
+.. _amldashboard_linux:
+
+#############
+AML Dashboard
+#############
+
+To get started with *AML Dashboard*, follow these steps.
+
+Clone the repository using the following command:
+
+.. code-block:: bash
+
+    git clone https://github.com/eProsima-Private/AML-Dashboard.git
+
+Requirements
+------------
+
+If |amlip| is not already installed in your system, follow the installation instructions provided `here <https://aml-ip.readthedocs.io/en/latest/rst/installation/linux.html>`__.
+
+Python dependencies
+^^^^^^^^^^^^^^^^^^^
+
+Ensure you have **Python3.11** installed together with the packages listed in the `requirements.txt <https://github.com/eProsima-Private/AML-Dashboard/main/requirements.txt>`__ file. If not, install them using the following commands: 
+
+.. code-block:: bash
+    
+    python3 -m venv fastdds-docs-venv
+    source fastdds-docs-venv/bin/activate
+    wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/main/requirements.txt
+    pip3 install -r requirements.txt
+
+.. note:: 
+
+    `pipx <https://pipx.pypa.io/stable/>`__ can also be used for users who prefer that as an alternative for managing Python packages in isolated environments.
+
+Context Broker
+^^^^^^^^^^^^^^^
+Finally, ensure that FIWARE Context Broker is correctly installed, following the steps provided `here <https://github.com/telefonicaid/fiware-orion/blob/master/docker/README.md#1-the-fastest-way>`__.
+
+npm and nodejs
+^^^^^^^^^^^^^^
+
+Ensure you have **npm (8.5.1)** and **nodejs (v12.22.9)** installed.
+If not, install them using the following command:
+
+.. code-block:: bash
+
+    sudo apt install -y npm nodejs
+
+Verify the installed versions using:
+
+.. code-block:: bash
+
+    npm -v
+    node -v
+
+Frontend Dependencies
+^^^^^^^^^^^^^^^^^^^^^
+
+Navigate to the ``frontend/aml_dashboard`` directory and install the frontend dependencies:
+
+.. code-block:: bash
+
+    cd frontend/aml_dashboard
+    npm i
+
+
+By following these steps, you'll have *AML Dashboard* equipped with all the necessary components and dependencies.
