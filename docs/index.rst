@@ -75,6 +75,7 @@
    /rst/tutorials/dashboard_train
    /rst/tutorials/dashboard_fetch
    /rst/tutorials/dashboard_debugger
+   /rst/tutorials/dashboard_context_broker
 
 .. _index_demos:
 
