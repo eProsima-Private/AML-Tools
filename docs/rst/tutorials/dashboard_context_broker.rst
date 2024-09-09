@@ -107,7 +107,7 @@ To send data to the Context Broker, follow these steps:
 
 3. Once the data is sent, the status will change to **Sended !** in the *Data Status*.
 
-Recieve the solution
+Receive the solution
 ====================
 
 Start an Inference Node

@@ -15,6 +15,12 @@ Clone the repository using the following command:
 
     git clone https://github.com/eProsima-Private/AML-Dashboard.git
 
+After cloning the repository, you must manually place the ``aml_engine`` inside the ``backend`` folder of the `AML Dashboard`.
+
+.. note::
+    The ``aml_engine`` is not included in the repository and must be obtained separately.
+    Please refer to the section :ref:`Get access to AML Toolkit <get_access_toolkit>` for instructions on how to request access to the `AML Engine`.
+
 Requirements
 ------------
 
@@ -23,16 +29,16 @@ If |amlip| is not already installed in your system, follow the installation inst
 Python dependencies
 ^^^^^^^^^^^^^^^^^^^
 
-Ensure you have **Python3.11** installed together with the packages listed in the `requirements.txt <https://github.com/eProsima-Private/AML-Dashboard/main/requirements.txt>`__ file. If not, install them using the following commands: 
+Ensure you have **Python3.11** installed together with the packages listed in the `requirements.txt <https://github.com/eProsima-Private/AML-Dashboard/main/requirements.txt>`__ file. If not, install them using the following commands:
 
 .. code-block:: bash
-    
+
     python3 -m venv fastdds-docs-venv
     source fastdds-docs-venv/bin/activate
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/main/requirements.txt
     pip3 install -r requirements.txt
 
-.. note:: 
+.. note::
 
     `pipx <https://pipx.pypa.io/stable/>`__ can also be used for users who prefer that as an alternative for managing Python packages in isolated environments.
 

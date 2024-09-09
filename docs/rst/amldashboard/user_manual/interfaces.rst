@@ -12,7 +12,7 @@ The *AML Dashboard* integrates six main interfaces:
 Data Collection
 ===============
 
-The first screen comprises five distinct areas that enable users to swiftly create their own data sets for training an |aml| model.
+The first tab comprises five distinct areas that enable users to swiftly create their own data sets for training an |aml| model.
 
 1. **Exploring Data Input**: The *AML Dashboard* collection interface is designed to help non-computer scientists easily create and understand data collection.
    It features two video representations:
