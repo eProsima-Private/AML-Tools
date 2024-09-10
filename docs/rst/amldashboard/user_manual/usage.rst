@@ -207,6 +207,8 @@ To predict the output of webcam images in real^time using an |aml| Model, follow
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_real_time_done.png
 
+.. _amldashboard_usage_context_broker:
+
 Context Broker Tab
 ^^^^^^^^^^^^^^^^^^
 

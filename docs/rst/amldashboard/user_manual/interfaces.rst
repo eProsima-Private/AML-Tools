@@ -77,7 +77,7 @@ It is divided into the following sections:
    - **Model Display**: Display the fetched model.
 
 Explore Models
-=================================
+==============
 
 The model exploration interface provides space for developers to add any desired model comparison matrix.
 The Marcelle framework supports various comparison modules and allows users to create custom :term:`GUI` elements for specific calculations.
@@ -87,7 +87,7 @@ Users must actively trigger the update of the matrix, facilitating a clear befor
 Future work aims to extend this section with more targeted visualizations utilizing the |aml| output structure.
 
 Real Time Pattern Exploration
-========================================
+=============================
 
 After training the models, users can move to the real time pattern exploration interface.
 This part of *AML Dashboard* allows users to explore music patterns using the self-trained models.
@@ -103,6 +103,8 @@ Key features include:
 
 Sound is produced by looping audio tracks of musical instruments assigned during data collection.
 Users can recreate gestures to explore sound intersections using *AML Dashboard*.
+
+.. _amldashboard_interfaces_context_broker:
 
 Context Broker interaction
 ==========================
