@@ -151,3 +151,16 @@ Retrieve the solution
          document.getElementById('myVideo').playbackRate = 1.0; // Set speed to 1.0x
       };
    </script>
+
+Troubleshooting
+===============
+
+If you encounter the following error when sending large files or data to the Context Broker:
+
+.. code-block:: bash
+
+   requests.exceptions.HTTPError: 413 Client Error: Content Too Large for url: http://localhost:1026/v2/entities
+
+You may need to configure the Context Broker to accept larger payloads.
+
+This error indicates that the request payload is too large for the server to process.
