@@ -9,7 +9,7 @@ Interfaces
 
 The *AML Dashboard* integrates six main interfaces:
 
-.. _data_collection:
+.. _amldashboard_interfaces_data_collection:
 
 Data Collection
 ===============

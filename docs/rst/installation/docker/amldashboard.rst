@@ -11,7 +11,7 @@ AML Dashboard
 
     Change the Dockerfile to use the main branch when it is merged.
 
-To build the Docker image using the provided `Dockerfile <https://github.com/eProsima-Private/AML-Dashboard/blob/feature/dfki_demo_amlip/Dockerfile>`, execute the following command:
+To build the Docker image using the provided `Dockerfile <https://github.com/eProsima-Private/AML-Dashboard/blob/main/Dockerfile>`_, execute the following command:
 
 .. code-block:: bash
 

@@ -3,18 +3,18 @@
 
 .. _tutorials_dashboard_inference:
 
-####################################
+#######################################
 Make predictions with the AML Dashboard
-####################################
+#######################################
 
 Background
 ==========
 
 The :term:`AML` Dashboard is a web-based tool that allows users to interact with the |aml| framework.
 
-This tutorial showcases the process of making predictions based on an |aml| model using the *AML Dashboard*.
+This tutorial showcases the process of making predictions using an |aml| model through the *AML Dashboard*, covering both real-time and batch prediction workflows.
 
-.. figure:: /rst/figures/tutorials/inference.png 
+.. figure:: /rst/figures/tutorials/inference_dashboard.png 
     :align: center
     :width: 100%
 
@@ -73,14 +73,12 @@ Start the Inference Node
 
    cd backend
 
-3. Start one or more inference nodes:
+3. Start an inference node:
 
 .. code-block:: bash
 
    python3 inference.py
 
-.. check if there can be more inference nodes run parallely. 
-Each inference node will wait for job assignments and will collectively distribute the workload when multiple nodes are running. 
 
 Start the AML Dashboard
 -----------------------
@@ -108,12 +106,12 @@ To evaluate a model using the |aml| Dashboard, follow these steps:
 
 2. Click on the ``Update Predictions`` button in the *Algebraic Machine Learning* section to initiate the predictions.
 
-5. The confusion matrix for the predictions made by the model will be displayed.
+3. The confusion matrix for the model's predictions will be displayed. This matrix helps in assessing the model's performance by showing the accuracy and errors.
 
 .. raw:: html
 
    <video id=myVideo width=100% height=auto autoplay loop controls muted>
-      <source src="../../_static/resources/tutorials/dashboard-batch-prediction.mp4">
+      <source src="../../_static/resources/tutorials/dashboard_batch_prediction.mp4">
       Your browser does not support the video tag.
    </video>
 
@@ -129,16 +127,16 @@ Real-Time Predictions
 
 To make real-time predictions using the trained model with the |aml| Dashboard, follow these steps:
 
-1. Navigate to the ``Real-time Prediction`` tab on the |aml| Dashboard.
+1. Go to the ``Real-time Prediction`` tab on the |aml| Dashboard.  
 
-2. Check on the ``toggle prediction`` button in the *Predict for AML* section to initiate the real-time prediction process.
+2. Click on the ``toggle prediction`` button in the *Predict for AML* section to start the real-time prediction process.  
 
-5. The label for the predictions made by the model will be displayed.
+3. In the *webcam* section, toggle the ``activate video`` button to enable the webcam.
 
 .. raw:: html
 
    <video id=myVideo width=100% height=auto autoplay loop controls muted>
-      <source src="../../_static/resources/tutorials/dashboard-real-time.mp4">
+      <source src="../../_static/resources/tutorials/dashboard_real_time.mp4">
       Your browser does not support the video tag.
    </video>
 
