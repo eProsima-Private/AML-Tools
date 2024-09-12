@@ -161,6 +161,14 @@ If you encounter the following error when sending large files or data to the Con
 
    requests.exceptions.HTTPError: 413 Client Error: Content Too Large for url: http://localhost:1026/v2/entities
 
+This error indicates that the request payload is too large for the server to process.
 You may need to configure the Context Broker to accept larger payloads.
 
-This error indicates that the request payload is too large for the server to process.
+To address this issue, you can adjust the following flags in the Context Broker configuration:
+
+* ``inReqPayloadMaxSize``: Increase this value to allow larger incoming request payloads.
+* ``outReqMsgMaxSize``: Adjust this value to handle larger outgoing response messages.
+* ``logInfoPayloadMaxSize``: Configure this flag to manage the size of payloads in log entries.
+* ``logLineMaxSize``: Modify this value to accommodate longer lines in log files.
+
+Set each flag according to the size of the data you need to handle.
