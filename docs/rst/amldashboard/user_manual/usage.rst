@@ -130,6 +130,8 @@ To create a dataset, simply follow these steps:
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_data_management.png
 
+.. _amldashboard_usage_training:
+
 Training Tab
 ^^^^^^^^^^^^
 
@@ -151,6 +153,8 @@ To train a model using |aml|, follow these steps:
 6. If the training process fails, an error message will be displayed indicating the reason for the failure.
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_trained.png
+
+.. _amldashboard_usage_fetching:
 
 Fetching Tab
 ^^^^^^^^^^^^
@@ -203,6 +207,8 @@ To predict the output of webcam images in real^time using an |aml| Model, follow
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_real_time_done.png
 
+.. _amldashboard_usage_context_broker:
+
 Context Broker Tab
 ^^^^^^^^^^^^^^^^^^
 
@@ -229,6 +235,8 @@ To create and update data to the Context Broker and get the solution (inference)
 8. If the solution retrieval process fails, an error message will be displayed indicating an error.
 
 .. figure:: /rst/figures/amldashboard/aml-dashboard_context_broker_created.png
+
+.. _amldashboard_usage_debugging:
 
 Status Tab
 ^^^^^^^^^^

@@ -72,6 +72,10 @@
    /rst/tutorials/binary_classifier_mnist.rst
    /rst/tutorials/aml_ip_collaborative_learning
    /rst/tutorials/aml_ip_workload_distribution
+   /rst/tutorials/dashboard_train
+   /rst/tutorials/dashboard_fetch
+   /rst/tutorials/dashboard_debugger
+   /rst/tutorials/dashboard_context_broker
 
 .. _index_demos:
 

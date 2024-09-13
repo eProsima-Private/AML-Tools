@@ -13,7 +13,7 @@ The implementation is divided into three stages:
 2. :ref:`amldashboard_aml_training_server`
 3. :ref:`amldashboard_real_time_prediction`
 
-.. figure:: /rst/figures/amldashboard/implementation.png
+.. figure:: /rst/figures/amldashboard/aml-dashboard_implementation.png
 
 .. _amldashboard_user_interface:
 
