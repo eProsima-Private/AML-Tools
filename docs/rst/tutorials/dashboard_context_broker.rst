@@ -152,6 +152,12 @@ Retrieve the solution
       };
    </script>
 
+.. note::
+
+   Currently, each Fiware Node only supports handling one entity of the Context Broker.
+   The data associated with that entity ID cannot be changed once initialized, meaning each Fiware Node will manage a single inference process.
+
+
 Troubleshooting
 ===============
 
