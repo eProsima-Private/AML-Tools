@@ -141,7 +141,7 @@ Retrieve the solution
 .. raw:: html
 
    <video id=myVideo width=100% height=auto autoplay loop controls muted>
-      <source src="../../_static/resources/tutorials/dashboard_inference.mp4">
+      <source src="../../_static/resources/tutorials/dashboard_context_broker.mp4">
       Your browser does not support the video tag.
    </video>
 
