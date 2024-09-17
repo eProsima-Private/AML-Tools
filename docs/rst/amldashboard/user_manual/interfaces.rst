@@ -9,6 +9,8 @@ Interfaces
 
 The *AML Dashboard* integrates six main interfaces:
 
+.. _amldashboard_interfaces_data_collection:
+
 Data Collection
 ===============
 
@@ -75,6 +77,8 @@ It is divided into the following sections:
    - **Request Button**: Request an |aml| model.
 
    - **Model Display**: Display the fetched model.
+
+.. _amldashboard_interfaces_evaluation:
 
 Explore Models
 ==============
