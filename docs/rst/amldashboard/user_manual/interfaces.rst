@@ -135,6 +135,57 @@ Create and update data in the Context Broker and receive solutions (inferences) 
 
    - **Solution Status**: Indicates whether the solution has been successfully retrieved.
 
+.. _amldashboard_interfaces_aml_ip:
+
+AML-IP Nodes Management
+=======================
+
+Manage the |amlip| nodes within the network.
+
+1. **Agent Nodes**:
+
+   - **Create Agent Node**: Specify the necessary parameters for the corresponding Agent Node creation.
+
+   - **Create Button**: Create the Agent Node.
+
+   - **Status Update**: Indicates whether the node has been created successfully.
+
+2. **Computing Nodes**:
+   
+   - **Create Button**: Create the Computing Node.
+
+   - **ID of Computing Node to manage**: Enter the ID of the Computing Node to manage.
+
+   - **Stop Button**: Stop the Computing Node.
+
+   - **Run Button**: Run the Computing Node.
+   
+   - **Stop and Delete Button**: Delete the Computing Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
+
+3. **Inference Nodes**:
+
+   - **Create Button**: Create the Inference Node.
+
+   - **ID of Inference Node to manage**: Enter the ID of the Inference Node to manage.
+
+   - **Stop Button**: Stop the Inference Node.
+
+   - **Run Button**: Run the Inference Node.
+
+   - **Stop and Delete Button**: Delete the Inference Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
+
+4. **Sender Nodes**:
+
+   - **Create Button**: Create the Sender Node.
+
+   - **Stop and Delete Button**: Delete the Sender Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
+
 .. _amldashboard_interfaces_debugging:
 
 Status
