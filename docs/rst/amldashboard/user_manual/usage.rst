@@ -37,10 +37,15 @@ Run the following commands to start the backend server:
 
    python3 server.py
 
+.. _amldashboard_usage_amlip:
+
 AML-IP Nodes
 ------------
 
 Depending on your requirements, you can run different types of |amlip| nodes:
+
+Manual Execution
+~~~~~~~~~~~~~~~~
 
 1. Load the |amlip| environment
 
@@ -87,6 +92,11 @@ To run an Inference Node, execute:
    python3 inference.py
 
 To stop an Inference Node, simply run ``ctrl+C``.
+
+Automatic Execution
+~~~~~~~~~~~~~~~~~~~
+
+To automatically run the |amlip| nodes, follow the steps in the :ref:`Manage AML-IP nodes with the AML-Dashboard <amldashboard_interfaces_aml_ip>` section.
 
 AML Dashboard
 -------------
