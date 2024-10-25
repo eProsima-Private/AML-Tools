@@ -1,6 +1,6 @@
 .. include:: /rst/exports/roles.include
 
-.. _demos_parallelize_aml_training_with_aml_ip:
+.. _parallelize_aml_training_with_aml_ip:
 
 ####################################
 Parallelize AML training with AML-IP
@@ -25,7 +25,7 @@ Before running this demo, ensure that :code:`AML-IP` is correctly installed usin
 
 * `AML-IP on Linux <https://aml-ip.readthedocs.io/en/latest/rst/developer_manual/installation/sources/linux/linux.html>`__
 * `AML-IP on Windows <https://aml-ip.readthedocs.io/en/latest/rst/developer_manual/installation/sources/windows/windows.html>`__
-* `Docker image <https://aml-ip.readthedocs.io/en/latest/rst/installation/docker.html#docker-image>`
+* `Docker image <https://aml-ip.readthedocs.io/en/latest/rst/installation/docker.html#docker-image>`__
 
 Once AML-IP packages are installed and built, import the libraries using the following command.
 
@@ -36,11 +36,12 @@ Once AML-IP packages are installed and built, import the libraries using the fol
 Structure
 =========
 
-Running AML with AML-IP requires the following structure:
+This tutorial is divided into the following sections:
+
 * :ref:`AML-IP Main Node with a custom Solution Listener <creating_the_main_node>`.
 * :ref:`AML-IP Computing Node with a custom Job Replier <creating_the_computing_node>`.
 * :ref:`Loading the dataset <loading_the_mnist_dataset>`.
-* :ref:`A function in charge of the AML training process <creating_the_aml_training_function>`
+* :ref:`A function in charge of the AML training process <creating_the_aml_training_function>`.
 * :ref:`A function to process the results <processing_aml_results>`.
 * :ref:`Running the demo <running_the_demo>`.
 
@@ -70,7 +71,7 @@ Steps
 
 .. note::
 
-    The user should implement the loadDatasets function in the way that best suits their needs.
+    The user should implement the loadDatasets module in the way that best suits their needs.
     In a future section, we provide an example of how to :ref:`load the MNIST dataset <loading_the_mnist_dataset>`.
 
     .. code-block:: python
@@ -93,24 +94,25 @@ Steps
 
 .. code-block:: python
 
-    def __init__(self):
-        super().__init__() # Call the parent constructor
+    class CustomSolutionListener(SolutionListener):
+        def __init__(self):
+            super().__init__() # Call the parent constructor
 
-    def solution_received(
-            self,
-            solution,
-            task_id,
-            server_id):
-        
-        global solution_data
-        if solution_data is None:
-            solution_data = json.loads(solution.to_string())
-        else:
-            solution_data.update(json.loads(solution.to_string()))
-            print('Solution received:', solution_data['0'])
-        global waiter_jobç
-        # Each time a solution is received, the waiter_job is increased
-        waiter_job.increase()
+        def solution_received(
+                self,
+                solution,
+                task_id,
+                server_id):
+
+            global solution_data
+            if solution_data is None:
+                solution_data = json.loads(solution.to_string())
+            else:
+                solution_data.update(json.loads(solution.to_string()))
+
+            global waiter_job
+            # Each time a solution is received, the waiter_job is increased
+            waiter_job.increase()
 
 5. Create the main routine
 
@@ -125,20 +127,12 @@ Steps
         global solution_data
         solution_data = None
 
-* Create the Main Node object
-
-.. code-block:: python
-
         print('Starting Async Main Node Py execution. Creating Node...')
         # Create the main node
         main_node = AsyncMainNode(
-        'PyTestAsyncMainNode',
-        listener=CustomSolutionListener(),
-        domain=DOMAIN_ID)       
-
-* Load and preprocess the data
-
-.. code-block:: python
+            'PyTestAsyncMainNode',
+            listener=CustomSolutionListener(),
+            domain=DOMAIN_ID)       
 
         # Load the dataset
         training_images, training_labels = loadMNIST('MNIST').load_training()
@@ -237,7 +231,6 @@ Steps
             print('Received job, calling train_alma')
 
             model = get_results(x, y, target_digit)
-            print(type(model))
             print('train_alma finished!')
             solution = JobSolutionDataType(json.dumps({task_id: model})) 
             return solution
@@ -286,8 +279,8 @@ Steps
 Loading the MNIST dataset
 ==========================
 
-In this demo, we use the MNIST binary AML_binary_classifier, explained
-in this tutorial :ref:`tutorials_aml_pipeline`.
+In this demo, we use the MNIST binary classifier, explained
+in the tutorial :ref:`tutorials_aml_pipeline`.
 
 Therefore, we need to load the MNIST dataset to train the model.
 The dataset files can be found `here <https://www.kaggle.com/datasets/hojjatk/mnist-dataset>`__.
@@ -347,8 +340,6 @@ Steps
             self.test_labels = []
             self.dataset_path = dataset_path
 
-            print (logging.INFO, 'Dataset path: ', self.dataset_path)
-
         def load_training(self):
             """
             Load the training dataset.
@@ -381,7 +372,7 @@ Steps
             self.test_images = np.array(images)
             return self.test_images, self.test_labels
 
-This class will be called by the main node load the MNIST dataset.
+This class will be called by the main node to load the MNIST dataset.
 
 .. _creating_the_aml_training_function:
 
@@ -395,8 +386,9 @@ This function should have as parameters the data to train the model and the targ
 for creating the positive duples. The user can choose whether to include other hyperparameters.
 
 This function should return the following:
-- The constant manager that contains the embedding constants ``model.cmanager``.
-- The cumulative model that has been built combining the atomizations across the whole training process ``batchLearner.lastUnionModel``.
+
+- The constant manager that contains the embedding constants: ``model.cmanager``.
+- The cumulative model that has been built combining the atomizations across the whole training process: ``batchLearner.lastUnionModel``.
 
 In this example, the function is implemented in a file named ``AML_binary_classifier.py``.
 
@@ -409,13 +401,16 @@ In this example, the function is implemented in a file named ``AML_binary_classi
     the system can handle datasets of any size without needing to load all images into memory simultaneously.
 
     The generator retrieves the next image of a specific class from the dataset.
-    It has the following parameters
+    It has the following parameters:
+
         * target_digit: The class (0-9) to retrieve or to avoid.
         * complement: Whether to get the class of interest or the rest of the classes.
+
     It returns a tuple (digit_data, label, index), where:
-         - digit_data is the list of pixel values for the target image.
-         - label is the image label (same as target_digit).
-         - index is the position of the image in the dataset.
+
+        * digit_data is the list of pixel values for the target image.
+        * label is the image label (same as target_digit).
+        * index is the position of the image in the dataset.
 
 .. _processing_aml_results:
 
@@ -423,7 +418,7 @@ Processing the results
 ======================
 
 After the training process is complete, the computing node sends the model to the main node.
-Therefore, in order to be able to pack the model into a JobSolutionDataType object,
+Therefore, in order to be able to pack the model into the ``JobSolutionDataType``,
 some processing is required.
 
 This is an example of how to process the results. The user can adapt this function to their needs.
