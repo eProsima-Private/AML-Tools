@@ -60,7 +60,7 @@ Key Features
 
 .. figure:: /rst/figures/amlhw/amlhw_overview.png
     :align: center
-    :width: 600px
+    :width: 700px
     :alt: Overview of AML Hardware Architecture.
     :figclass: align-center
     
