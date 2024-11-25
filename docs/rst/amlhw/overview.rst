@@ -23,26 +23,23 @@ Key Features
 ============
 
 1. **Parallel Cores and Memory Hierarchy:**
-
     * The hardware architecture consists of parallel cores, each capable of independently computing an AML task.
     * Each core consists of computing units specifically designed for AML tasks. These units are internally parallelized, providing high throughput.
     * Each core is connected to a channel of HBM memory, enabling independent operation from other cores with high memory bandwidth.
     * Cores contain local scratchpad buffers, allowing data reuse and prefetching to minimize off-chip memory access.
 
 2. **Custom Instruction Set:**
-
     * The core operations are controlled through an in-house defined instruction set.
     * This instruction set includes details about the type of operation, size, and address of data, which the control unit uses to fetch data and activate the corresponding compute unit.
 
 3. **PCIe Interface:**
-
     * The architecture is equipped with a PCIe interface, making it compatible with any existing computing platform.
     * Users can offload time-consuming AML tasks to the hardware accelerator, leveraging parallelization to improve throughput.
     * Results from each task can be accessed through the PCIe interface.
 
 .. figure:: /rst/figures/amlhw/amlhw_overview.png
     :align: center
-    :width: 800px
+    :width: 600px
     :alt: Overview of AML Hardware Architecture.
     :figclass: align-center
     

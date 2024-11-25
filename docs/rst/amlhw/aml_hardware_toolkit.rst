@@ -23,5 +23,5 @@ Our task was to design a hardware architecture that efficiently accelerates AML 
 
 .. toctree::
    :maxdepth: 2
-    /rst/amlhw/overview
-    /rst/amlhw/internal_architecture_aml_core
+    overview
+    internal_architecture_aml_core
