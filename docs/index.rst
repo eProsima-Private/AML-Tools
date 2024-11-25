@@ -46,7 +46,6 @@
    :hidden:
 
    /rst/amlhw/aml_hardware_toolkit
-   /rst/amlhw/overview
    /rst/amlhw/internal_architecture_aml_core
 
 .. _index_amlip:
