@@ -37,6 +37,17 @@
    /rst/amldl/consistency_checker/consistency_checker
    /rst/amldl/debugger/debugger
 
+.. _index_amlhw:
+
+.. toctree::
+   :caption: AML Hardware Toolkit
+   :maxdepth: 2
+   :numbered: 5
+   :hidden:
+
+   /rst/amlhw/aml_hardware_toolkit
+   /rst/amlhw/internal_architecture_aml_core
+
 .. _index_amlip:
 
 .. toctree::
