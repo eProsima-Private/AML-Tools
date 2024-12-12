@@ -49,7 +49,7 @@ Real-time Prediction
 
 .. warning::
 
-  This feature is only available when the dataset contains gesture data.
+  This feature is only available when the dataset is ``Sensors``.
 
 The third stage involves mapping user-defined gestures to sound patterns using real-time predictions based on the selected model.
 

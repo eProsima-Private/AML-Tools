@@ -100,7 +100,7 @@ Real Time Pattern Exploration
 
 .. warning::
 
-   This feature is only available when the dataset contains gesture data.
+   This feature is only available when the dataset is ``Sensors``.
 
 After training the models, users can move to the real time pattern exploration interface.
 This part of *AML Dashboard* allows users to explore music patterns using the self-trained models.
