@@ -154,7 +154,7 @@ There are several options available for dataset creation:
 
    The custom dataset must be in the correct format to be loaded successfully. This is explained in the :ref:`collecting_data` tutorial.
 
-1. Choose 'Custom' from the drop-down menu in the *Choose the model for the training set* section.
+1. Choose ``Custom`` from the drop-down menu in the *Choose the model for the training set* section.
 
 2. Click on the ``Load dataset`` button to load the custom dataset.
 
