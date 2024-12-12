@@ -124,7 +124,7 @@ There are several options available for dataset creation:
  
    To create the dataset in the desired format, the code snippet below can be used as a reference:
  
-    .. code-block:: python
+   .. code-block:: python
  
       def save_in_format(images, labels):
          """
