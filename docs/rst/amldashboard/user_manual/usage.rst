@@ -130,37 +130,37 @@ There are several options available for dataset creation:
 
 * Record hand gestures.
 
-    1. Choose ``Sensors`` from the drop-down menu in the *Choose the model for the training set* section.
- 
-    2. Activate the ``video`` switch in the webcam section to enable webcam capture.
- 
-    3. Specify the label of the dataset in the *Instance label* section.
- 
-    4. Click on the ``Hold to record instances`` button in the *Capture instances to the training set* to start recording instances.
- 
-    5. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
+1. Choose ``Sensors`` from the drop-down menu in the *Choose the model for the training set* section.
+
+2. Activate the ``video`` switch in the webcam section to enable webcam capture.
+
+3. Specify the label of the dataset in the *Instance label* section.
+
+4. Click on the ``Hold to record instances`` button in the *Capture instances to the training set* to start recording instances.
+
+5. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
 
 * Select a standard dataset from the system.
  
-    1. Choose a dataset from the drop-down menu in the *Choose the model for the training set* section.
- 
-    2. Click on the ``Load dataset`` button to load the selected dataset.
- 
-    3. The dataset will be displayed in the *dataset browser* section for easy access and management.
+1. Choose a dataset from the drop-down menu in the *Choose the model for the training set* section.
+
+2. Click on the ``Load dataset`` button to load the selected dataset.
+
+3. The dataset will be displayed in the *dataset browser* section for easy access and management.
  
 * Load a custom dataset.
 
-    .. warning::
- 
-       The custom dataset must be in the correct format to be loaded successfully. This is explained in the :ref:`tutorials_dashboard_data_management` tutorial.
- 
-    1. Choose 'Custom' from the drop-down menu in the *Choose the model for the training set* section.
- 
-    2. Click on the ``Load dataset`` button to load the custom dataset.
- 
-    3. A popup will appear, allowing you to select the desired dataset from your local machine.
- 
-    4. Once loaded, the dataset will be displayed in the *dataset browser* section for easy access and management.
+.. warning::
+
+   The custom dataset must be in the correct format to be loaded successfully. This is explained in the :ref:`tutorials_dashboard_data_management` tutorial.
+
+1. Choose 'Custom' from the drop-down menu in the *Choose the model for the training set* section.
+
+2. Click on the ``Load dataset`` button to load the custom dataset.
+
+3. A popup will appear, allowing you to select the desired dataset from your local machine. 
+
+4. Once loaded, the dataset will be displayed in the *dataset browser* section for easy access and management.
 
 .. note::
 
@@ -184,7 +184,7 @@ To train a model using |aml|, follow these steps:
 
 3. Set the percentage of dataset to distribute in each execution.
 
-4. Specify the target class when the classification is binary( this is the case when standard or custom datasets are used).
+4. Specify the target class when the classification is binary (this is the case when standard or custom datasets are used).
 
 5. Optionally, an atomization file can be uploaded to the system, allowing to start the training process with a pre-trained model.
 
