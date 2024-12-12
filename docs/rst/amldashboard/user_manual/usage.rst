@@ -152,7 +152,7 @@ There are several options available for dataset creation:
 
 .. warning::
 
-   The custom dataset must be in the correct format to be loaded successfully. This is explained in the :ref:`tutorials_dashboard_data_management` tutorial.
+   The custom dataset must be in the correct format to be loaded successfully. This is explained in the :ref:`collecting_data` tutorial.
 
 1. Choose 'Custom' from the drop-down menu in the *Choose the model for the training set* section.
 
@@ -239,11 +239,11 @@ To predict the output of a dataset, follow these steps:
 Real-Time Prediction Tab
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To predict the output of webcam images in real^time using an |aml| Model, follow these steps:
-
 .. warning::
 
    This feature is only available when the dataset is ``Sensors``.
+
+To predict the output of webcam images in real^time using an |aml| Model, follow these steps:
 
 .. note::
 

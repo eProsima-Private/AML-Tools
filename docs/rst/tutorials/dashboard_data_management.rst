@@ -67,6 +67,8 @@ Start the AML Dashboard
 
 3. Access the dashboard at `http://localhost:5173/ <http://localhost:5173/>`__.
 
+.. _collecting_data:
+
 Collecting data
 ===============
 
@@ -106,7 +108,7 @@ There are several options available for dataset creation:
  
 3. Click on the ``Load dataset`` button to load the dataset.
  
- .. TODO : Add video for loading a standard dataset
+.. TODO : Add video for loading a standard dataset
 
 * **Custom dataset**: Load a custom dataset.
 
@@ -118,7 +120,7 @@ There are several options available for dataset creation:
  
 4. A popup will appear, allowing you to select the desired dataset from your local machine.
  
- .. warning::
+.. warning::
  
    The custom dataset must be a json file in the correct format.
  
@@ -172,4 +174,4 @@ There are several options available for dataset creation:
  
          return formatted_data
  
-    .. TODO : Add video for loading a custom dataset
+.. TODO : Add video for loading a custom dataset
