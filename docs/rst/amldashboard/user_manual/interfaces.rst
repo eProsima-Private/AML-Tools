@@ -17,7 +17,7 @@ Data Collection
 The first tab comprises five distinct areas that enable users to swiftly create their own data sets for training an |aml| model.
 
 1. **Exploring Data Input**: The *AML Dashboard* collection interface is designed to help non-computer scientists easily create and understand data collection.
-   It features two video representations:
+   It features the following components:
 
    - **A Drop-down Menu**: Allows users to select the dataset they want to collect.
      The available options are: *Sensors* (for gesture data), *MNIST* (for handwritten digits), *KMnist* (for handwritten Japanese characters),

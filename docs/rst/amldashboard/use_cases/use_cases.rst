@@ -13,7 +13,7 @@ Use Cases
 
 *AML Dashboard* addresses two primary use cases, catering to different audiences and purposes:
 creative professionals exploring sound variations in order to enhance creativity and create unique sound experiences;
-and computer scientists exploring and developing new applications using |aml| needing a practical tool to to asses the efficiency of the |aml| algorithm.
+and computer scientists exploring and developing new applications using |aml| needing a practical tool to assess the efficiency of the |aml| algorithm.
 
 .. _aml_sound_exploration: 
 
