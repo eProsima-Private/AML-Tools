@@ -131,7 +131,7 @@ Real-Time Predictions
 
 .. warning::
 
-   This feature is only available when the dataset contains gesture data.
+   This feature is only available when the dataset is ``Sensors``.
 
 To make real-time predictions using the trained model with the |aml| Dashboard, follow these steps:
 

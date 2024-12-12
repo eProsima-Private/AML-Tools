@@ -243,7 +243,7 @@ To predict the output of webcam images in real^time using an |aml| Model, follow
 
 .. warning::
 
-   This feature is only available when the dataset contains gesture data.
+   This feature is only available when the dataset is ``Sensors``.
 
 .. note::
 
