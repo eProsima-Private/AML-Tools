@@ -128,7 +128,7 @@ Data Management Tab
 
 There are several options available for dataset creation:
 
-* Record hand gestures.
+**Record hand gestures.**
 
 1. Choose ``Sensors`` from the drop-down menu in the *Choose the model for the training set* section.
 
@@ -140,7 +140,7 @@ There are several options available for dataset creation:
 
 5. Once recorded, the dataset will be promptly displayed in the *dataset browser* section for easy access and management.
 
-* Select a standard dataset from the system.
+**Select a standard dataset from the system.**
  
 1. Choose a dataset from the drop-down menu in the *Choose the model for the training set* section.
 
@@ -148,7 +148,7 @@ There are several options available for dataset creation:
 
 3. The dataset will be displayed in the *dataset browser* section for easy access and management.
  
-* Load a custom dataset.
+**Load a custom dataset.**
 
 .. warning::
 
