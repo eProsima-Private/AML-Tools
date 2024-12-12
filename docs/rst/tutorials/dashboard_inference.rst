@@ -108,6 +108,10 @@ To evaluate a model using the |aml| Dashboard, follow these steps:
 
 3. The confusion matrix for the model's predictions will be displayed. This matrix helps in assessing the model's performance by showing the accuracy and errors.
 
+.. note::
+
+   If binary classification is used, the target class chosen in the training will be displayed as the positive class, while the other classes will be considered as the negative class.
+
 .. raw:: html
 
    <video id=myVideo width=100% height=auto autoplay loop controls muted>
@@ -124,6 +128,10 @@ To evaluate a model using the |aml| Dashboard, follow these steps:
 
 Real-Time Predictions
 =====================
+
+.. warning::
+
+   This feature is only available when the dataset contains gesture data.
 
 To make real-time predictions using the trained model with the |aml| Dashboard, follow these steps:
 
