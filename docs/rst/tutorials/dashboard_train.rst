@@ -106,6 +106,7 @@ To train a model using the |aml| Dashboard, follow these steps:
    - Number of parallel trainings (executions).
    - Number of iterations per execution.
    - Percentage of the dataset to distribute in each execution.
+   - The target class when the classification is binary( this is the case when standard or custom datasets are used).
 
 3. Configure the neural network parameters:
 
@@ -113,9 +114,15 @@ To train a model using the |aml| Dashboard, follow these steps:
    - Number of epochs.
    - Batch size.
 
-4. Click on the ``Train`` button in the *AML Training Launcher* to initiate the training process.
+   .. note:: 
 
-5. The training progress will be displayed, and the model status will update to **Finished :)** once the training is completed.
+      The target class previously set will also be used for the neural network training.
+
+4. Optionally, upload an atomization file as a pre-trained model.
+
+5. Click on the ``Train`` button in the *AML Training Launcher* to initiate the training process.
+
+6. The training progress will be displayed, and the model status will update to **Finished :)** once the training is completed.
 
 .. raw:: html
 
