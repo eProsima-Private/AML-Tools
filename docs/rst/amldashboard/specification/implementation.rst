@@ -24,7 +24,7 @@ The first stage involves the user interface, implemented using Marcelle and a we
 
 This stage combines:
 
-- **Frontend**: Implemented in JavaScript, it includes the Marcelle interface (:term:`GUI`) where users interact with the system to collect and label gesture input data.
+- **Frontend**: Implemented in JavaScript, it includes the Marcelle interface (:term:`GUI`) where users interact with the system to collect training data.
 - **Backend**: Developed in Python, it processes the collected data and prepares it for model training.
 
 .. _amldashboard_aml_training_server:
@@ -46,6 +46,10 @@ Key components include:
 
 Real-time Prediction
 ====================
+
+.. warning::
+
+  This feature is only available when the dataset contains gesture data.
 
 The third stage involves mapping user-defined gestures to sound patterns using real-time predictions based on the selected model.
 
