@@ -45,8 +45,7 @@ He uses *AML Dashboard* to test and evaluate the potential of |aml| through a ha
 
 Steps Victor follows:
 
-1. **Dataset Creation**: There are several options available: record hand gestures for different musical instruments, selecting from a drop-down menu and pressing the ``record`` button;
-   select a standard dataset from the system or load a custom dataset.
+1. **Dataset Creation**: There are several options available: record hand gestures for different musical instruments, selecting from a drop-down menu and pressing the ``record`` button; select a standard dataset from the system or load a custom dataset.
 
 2. **Model Training**: He trains the model and activates the evaluation mode to examine the confusion matrix and the atoms used in each class.
 
