@@ -124,7 +124,7 @@ With the *AML Dashboard* up and running, you can access it at the following addr
 .. _amldashboard_usage_data_management:
 
 Data Management Tab
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 There are several options available for dataset creation:
 
@@ -171,7 +171,7 @@ There are several options available for dataset creation:
 .. _amldashboard_usage_training:
 
 Training Tab
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 To train a model using |aml|, follow these steps:
 
@@ -199,7 +199,7 @@ To train a model using |aml|, follow these steps:
 .. _amldashboard_usage_fetching:
 
 Fetching Tab
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 To fetch a model, follow these steps:
 
@@ -222,7 +222,7 @@ To fetch a model, follow these steps:
 .. _amldashboard_usage_evaluation:
 
 Batch Prediction Tab
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 To predict the output of a dataset, follow these steps:
 
@@ -237,7 +237,7 @@ To predict the output of a dataset, follow these steps:
 .. figure:: /rst/figures/amldashboard/aml-dashboard_batch_prediction_done.png
 
 Real-Time Prediction Tab
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 To predict the output of webcam images in real^time using an |aml| Model, follow these steps:
 
@@ -258,7 +258,7 @@ To predict the output of webcam images in real^time using an |aml| Model, follow
 .. _amldashboard_usage_context_broker:
 
 Context Broker Tab
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 To create and update data to the Context Broker and get the solution (inference) from the |aml| Model, follow these steps:
 
@@ -287,7 +287,7 @@ To create and update data to the Context Broker and get the solution (inference)
 .. _amldashboard_usage_debugging:
 
 Status Tab
-^^^^^^^^^^
+~~~~~~~~~~
 
 The status tab automatically refreshes every second, ensuring you receive real-time updates and information about the network's status.
 
