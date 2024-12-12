@@ -19,6 +19,10 @@ The first tab comprises five distinct areas that enable users to swiftly create 
 1. **Exploring Data Input**: The *AML Dashboard* collection interface is designed to help non-computer scientists easily create and understand data collection.
    It features two video representations:
 
+   - **A Drop-down Menu**: Allows users to select the dataset they want to collect.
+     The available options are: *Sensors* (for gesture data), *MNIST* (for handwritten digits), *KMnist* (for handwritten Japanese characters),
+     *FashionMnist* (for clothing items), *MedMnist* (for medical images), *Cifar10* (for objects) and *Custom* (for user-defined data).
+
    - **Ground Truth Video Stream**: Shows the actual video feed.
 
    - **Overlaid Skeleton Video**: Displays the skeleton recognized by the hand recognition algorithm.
@@ -36,13 +40,14 @@ The first tab comprises five distinct areas that enable users to swiftly create 
 Training
 ========
 
-The Training page is where users can configure and monitor the training process of the |aml| model. It provides options to set training parameters, track the training progress, and compare the performance of the |aml| model with other classifiers. Additionally, users can train both the |aml| model and a neural network model for future comparison.
+The Training page is where users can configure and monitor the training process of the |aml| model. It provides options to set training parameters, track the training progress, and compare the performance of the |aml| model with other classifiers.
+Additionally, users can train both the |aml| model and a neural network model for future comparison.
 
 It is divided in two sections:
 
 1. **AML Model Training Information (Left Side)**:
 
-   - **Training Information**: Users can set parameters such as the number of iterations or the percentage of data used for each execution.
+   - **Training Information**: Users can set parameters such as the number of iterations, the percentage of data used for each execution or the target class when the classification is binary.
 
    - **Training Status**: Displays the current state of training.
 
@@ -92,6 +97,10 @@ Future work aims to extend this section with more targeted visualizations utiliz
 
 Real Time Pattern Exploration
 =============================
+
+.. warning::
+
+   This feature is only available when the dataset contains gesture data.
 
 After training the models, users can move to the real time pattern exploration interface.
 This part of *AML Dashboard* allows users to explore music patterns using the self-trained models.

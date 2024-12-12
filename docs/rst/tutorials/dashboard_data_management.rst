@@ -1,7 +1,7 @@
 .. include:: /rst/exports/alias.include
 .. include:: /rst/exports/roles.include
 
-.. _tutorials_dashboard_train:
+.. _tutorials_dashboard_data_management:
 
 ##################################
 Manage data with the AML Dashboard
