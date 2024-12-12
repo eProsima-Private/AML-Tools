@@ -89,7 +89,7 @@ There are several options available for dataset creation:
 .. raw:: html
 
    <video id=myVideo width=100% height=auto autoplay loop controls muted>
-      <source src="../../_static/resources/tutorials/dashboard_data_management.mp4">
+      <source src="../../_static/resources/tutorials/dashboard_data_management_sensors.mp4">
       Your browser does not support the video tag.
    </video>
 
@@ -108,7 +108,19 @@ There are several options available for dataset creation:
  
 3. Click on the ``Load dataset`` button to load the dataset.
  
-.. TODO : Add video for loading a standard dataset
+.. raw:: html
+
+   <video id=myVideo width=100% height=auto autoplay loop controls muted>
+      <source src="../../_static/resources/tutorials/dashboard_data_management_standard.mp4">
+      Your browser does not support the video tag.
+   </video>
+
+   <script>
+      // Set the speed of the video once the page is loaded
+      window.onload = function() {
+         document.getElementById('myVideo').playbackRate = 1.3; // Set speed to 1.3x
+      };
+   </script>
 
 * **Custom dataset**: Load a custom dataset.
 
@@ -174,4 +186,16 @@ There are several options available for dataset creation:
  
          return formatted_data
  
-.. TODO : Add video for loading a custom dataset
+.. raw:: html
+
+   <video id=myVideo width=100% height=auto autoplay loop controls muted>
+      <source src="../../_static/resources/tutorials/dashboard_data_management_custom.mp4">
+      Your browser does not support the video tag.
+   </video>
+
+   <script>
+      // Set the speed of the video once the page is loaded
+      window.onload = function() {
+         document.getElementById('myVideo').playbackRate = 1.3; // Set speed to 1.3x
+      };
+   </script>
