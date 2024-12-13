@@ -33,8 +33,8 @@ Ensure you have **Python3.11** installed together with the packages listed in th
 
 .. code-block:: bash
 
-    python3 -m venv fastdds-docs-venv
-    source fastdds-docs-venv/bin/activate
+    python3 -m venv amlip-venv
+    source amlip-venv/bin/activate
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/main/requirements.txt
     pip3 install -r requirements.txt
 
