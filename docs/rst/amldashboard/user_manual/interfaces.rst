@@ -17,7 +17,11 @@ Data Collection
 The first tab comprises five distinct areas that enable users to swiftly create their own data sets for training an |aml| model.
 
 1. **Exploring Data Input**: The *AML Dashboard* collection interface is designed to help non-computer scientists easily create and understand data collection.
-   It features two video representations:
+   It features the following components:
+
+   - **A Drop-down Menu**: Allows users to select the dataset they want to collect.
+     The available options are: *Sensors* (for gesture data), *MNIST* (for handwritten digits), *KMnist* (for handwritten Japanese characters),
+     *FashionMnist* (for clothing items), *MedMnist* (for medical images), *Cifar10* (for objects) and *Custom* (for user-defined data).
 
    - **Ground Truth Video Stream**: Shows the actual video feed.
 
@@ -36,13 +40,14 @@ The first tab comprises five distinct areas that enable users to swiftly create 
 Training
 ========
 
-The Training page is where users can configure and monitor the training process of the |aml| model. It provides options to set training parameters, track the training progress, and compare the performance of the |aml| model with other classifiers. Additionally, users can train both the |aml| model and a neural network model for future comparison.
+The Training page is where users can configure and monitor the training process of the |aml| model. It provides options to set training parameters, track the training progress, and compare the performance of the |aml| model with other classifiers.
+Additionally, users can train both the |aml| model and a neural network model for future comparison.
 
 It is divided in two sections:
 
 1. **AML Model Training Information (Left Side)**:
 
-   - **Training Information**: Users can set parameters such as the number of iterations or the percentage of data used for each execution.
+   - **Training Information**: Users can set parameters such as the number of iterations, the percentage of data used for each execution or the target class when the classification is binary.
 
    - **Training Status**: Displays the current state of training.
 
@@ -93,6 +98,10 @@ Future work aims to extend this section with more targeted visualizations utiliz
 Real Time Pattern Exploration
 =============================
 
+.. warning::
+
+   This feature is only available when the dataset is ``Sensors``.
+
 After training the models, users can move to the real time pattern exploration interface.
 This part of *AML Dashboard* allows users to explore music patterns using the self-trained models.
 
@@ -134,6 +143,57 @@ Create and update data in the Context Broker and receive solutions (inferences) 
    - **Solution Display**: Displays the solution received from the Context Broker, which is the inference received from the |aml| model after processing the data.
 
    - **Solution Status**: Indicates whether the solution has been successfully retrieved.
+
+.. _amldashboard_interfaces_aml_ip:
+
+AML-IP Nodes Management
+=======================
+
+Manage the |amlip| nodes within the network.
+
+1. **Agent Nodes**:
+
+   - **Create Agent Node**: Specify the necessary parameters for the corresponding Agent Node creation.
+
+   - **Create Button**: Create the Agent Node.
+
+   - **Status Update**: Indicates whether the node has been created successfully.
+
+2. **Computing Nodes**:
+   
+   - **Create Button**: Create the Computing Node.
+
+   - **ID of Computing Node to manage**: Enter the ID of the Computing Node to manage.
+
+   - **Stop Button**: Stop the Computing Node.
+
+   - **Run Button**: Run the Computing Node.
+   
+   - **Stop and Delete Button**: Delete the Computing Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
+
+3. **Inference Nodes**:
+
+   - **Create Button**: Create the Inference Node.
+
+   - **ID of Inference Node to manage**: Enter the ID of the Inference Node to manage.
+
+   - **Stop Button**: Stop the Inference Node.
+
+   - **Run Button**: Run the Inference Node.
+
+   - **Stop and Delete Button**: Delete the Inference Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
+
+4. **Sender Nodes**:
+
+   - **Create Button**: Create the Sender Node.
+
+   - **Stop and Delete Button**: Delete the Sender Node.
+
+   - **Status Update**: Indicates whether the node has been created, stopped, ran or delted successfully.
 
 .. _amldashboard_interfaces_debugging:
 

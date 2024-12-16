@@ -11,7 +11,9 @@ Use Cases
 
    The mentioned implementation is a work in progress and is not yet available in the current version of *AML Dashboard*.
 
-*AML Dashboard* addresses two primary use cases, catering to different audiences and purposes: creative professionals exploring sound variations in order to enhance creativity and create unique sound experiences; and computer scientists exploring and developing new applications using |aml| needing a practical tool to to asses the efficiency of the |aml| algorithm.
+*AML Dashboard* addresses two primary use cases, catering to different audiences and purposes:
+creative professionals exploring sound variations in order to enhance creativity and create unique sound experiences;
+and computer scientists exploring and developing new applications using |aml| needing a practical tool to assess the efficiency of the |aml| algorithm.
 
 .. _aml_sound_exploration: 
 
@@ -39,13 +41,13 @@ Exploring and Comparing the Potential of AML using *AML Dashboard*
 =============================================================
 
 Victor is a computer scientist exploring new machine learning approaches for his project.
-He uses *AML Dashboard* to test and evaluate the potential of |aml| through a hands-on approach similar to Emilie's.
+He uses *AML Dashboard* to test and evaluate the potential of |aml| through a hands-on approach.
 
 Steps Victor follows:
 
-1. **Gesture Recording**: He uses the camera to record hand gestures for different musical instruments, selecting from a drop-down menu and pressing the ``record`` button.
+1. **Dataset Creation**: There are several options available: record hand gestures for different musical instruments, selecting from a drop-down menu and pressing the ``record`` button; select a standard dataset from the system or load a custom dataset.
 
 2. **Model Training**: He trains the model and activates the evaluation mode to examine the confusion matrix and the atoms used in each class.
 
-3. **Evaluation and Refinement**: Victor adds new recordings to each label, retrains the model, and evaluates the results.
+3. **Evaluation and Refinement**: Victor adds new data to each label, retrains the model, and evaluates the results.
    He investigates the classes and atoms triggered by varying the gestures, gaining a better understanding of *AML's* potential.
