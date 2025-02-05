@@ -25,13 +25,16 @@ Building and Running the Containers
 To build and run the Docker containers, execute the following steps:
 
 1. Create a working directory and navigate into it:
+
 .. code-block:: bash
 
     mkdir AML-Dashboard
     cd AML-Dashboard
 
 2. Download the required Dockerfiles and docker-compose.yml:
+
 .. code-block:: bash
+
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/refs/heads/feature/add_dockerfile/Dockerfile_Frontend
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/refs/heads/feature/add_dockerfile/Dockerfile_Backend
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/refs/heads/feature/add_dockerfile/docker-compose.yml
@@ -39,6 +42,7 @@ To build and run the Docker containers, execute the following steps:
 3. Start the services using docker-compose:
 
 .. code-block:: bash
+
     docker compose up -d
 
 4. After the containers are built move your ``aml_engine`` folder from your machine to the docker backend.
@@ -47,7 +51,7 @@ To build and run the Docker containers, execute the following steps:
 
     docker cp <path_to_aml_engine/aml_engine> aml-dashboard-amldashboard-backend-1:/AML-Dashboard/backend/
 
-The AML Dashboard will be available at `http://localhost:5173`.
+The AML Dashboard will be available at `<http://localhost:5173>`_.
 
 5. To stop the services, execute the following command:
 
@@ -73,4 +77,3 @@ The Docker Compose launches the following containers:
   The frontend uses Node.js with dependencies managed through ``npm``.
   Once built, it runs the frontend interface using ``npm run dev``.
   It also runs in host network mode to facilitate seamless communication between services.
-
