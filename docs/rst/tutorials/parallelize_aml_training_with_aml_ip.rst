@@ -191,12 +191,12 @@ Steps
 
 .. note::
 
-    The user should implement the ``train_alma`` and ``get_results`` functions in the way that best suits their needs.
-    In a :ref:`future section <creating_the_aml_training_function>`, we provide an example of how to create these functions in a basic form for demonstration purposes.
+    The user should implement the ``train_alma`` function in the way that best suits their needs.
+    In a :ref:`future section <creating_the_aml_training_function>`, we provide an example of how to create this function in a basic form for demonstration purposes.
 
     .. code-block:: python
 
-        from AML_binary_classifier import train_alma, get_results
+        from AML_binary_classifier import train_alma
 
 3. Create global variables
 
@@ -230,9 +230,9 @@ Steps
 
             print('Received job, calling train_alma')
 
-            model = get_results(x, y, target_digit)
+            model = train_alma(x, y, target_digit)
             print('train_alma finished!')
-            solution = JobSolutionDataType(json.dumps({task_id: model})) 
+            solution = JobSolutionDataType(json.dumps(model)) 
             return solution
 
 5. Create the main routine
@@ -427,7 +427,7 @@ The following functions are implemented in a file named ``AML_binary_classifier.
 Steps
 *****
 
-1. Map connstants to atoms
+1. Map constants to atoms
 
 .. code-block:: python
 
@@ -438,26 +438,34 @@ Steps
         :param lst_atoms: The list of atoms. The batchLearner.lastUnionModel from the training function.
         :return: A dictionary mapping constants to atoms.
         """
-        # Create a dictionary to map constants to atoms
-        map_const_to_atoms = {}
-        # Iterate over the constant set
+        json_dict = {}
+        map_name_to_const = {}
+        for k, v in constant_manager.getReversedNameDictionary().items():
+            map_name_to_const[v] = int(k[1:])
+            json_dict['vTerm'] = list(map_name_to_const.values())
+
         for int_const in constant_manager.getConstantSet():
-            lst_atoms_in_const = []
-            # Iterate over the atoms
-            for atom in lst_atoms:
-                # Check if the constant is in the atom
-                if int_const in atom.ucs:
-                    # Convert the atom (bitarray) to a list and append it to the list of atoms in the constant
-                    lst_atoms_in_const.append(list(atom.ucs))
-            # Add the list of atoms to the dictionary
-            map_const_to_atoms[int_const] = lst_atoms_in_const
-        return map_const_to_atoms
+            list_atomization = []
+            if int_const in map_name_to_const.values():
+                for atom in lst_atoms:
+                    map_atomization = {}
+                    if int_const in atom.ucs:
+                        bitarray_atom_to_list = list(atom.ucs)
+                        atom_epoch = atom.epoch
+                        print('atom_epoch:',atom_epoch)
+                        atom_gen = atom.gen
+                        map_atomization['atom_epoch'] = atom_epoch
+                        map_atomization['atom_gen'] = atom_gen
+                        map_atomization['atom_ucs'] = bitarray_atom_to_list
+                        list_atomization.append(map_atomization)
+                json_dict[int_const] = list_atomization
+        return json_dict
 
 2. Train the model and get the processed results
 
 .. code-block:: python
 
-    def get_results(images, labels, target_digit=0):
+    def train_alma(images, labels, target_digit=0):
         """
         This function trains an Alma binary classifier using the given dataset.
         :param images: The images in the dataset.
@@ -468,11 +476,11 @@ Steps
         """
 
         # Train the model
-        cmanager, lst_atoms = train_alma(images, labels, target_digit)
+        cmanager, lst_atoms = train_binary_classifier(images, labels, target_digit)
         # Load the AML structures
-        atoms_conv = load_aml_structures(cmanager, lst_atoms)
+        atomization_dict = load_aml_structures(cmanager, lst_atoms)
 
-        return atoms_conv
+        return atomization_dict
 
 .. _running_the_demo:
 
