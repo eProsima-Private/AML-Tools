@@ -20,12 +20,15 @@ The primary goal of the *AML Dashboard* is to enable users to:
 2. Train classifiers using the *AML Engine*.
 3. Compare the performance of |aml| models with other :term:`ML` approaches.
 
-To achieve this, the *AML Dashboard* integrates four main interfaces:
+To achieve this, the *AML Dashboard* integrates seven main interfaces:
 
 * **Dataset Interface**: Allows users to collect data through personal gestures or load existing datasets.
 * **Training Interface**: Facilitates the training of |aml| models based on loaded datasets.
 * **Model Exploration Interface**: Enables users to explore and compare the capabilities of |aml| models with other :term:`ML` approaches.
 * **Real Time Exploration Interface**: Applies the trained |aml| algorithm in real-time. This feature is only available when the dataset chosen is ``Sensors``. It enables users to explore new sound patterns using personal gestures.
+* **Model Fetching Interface**: Fetches trained models and statistics using an AML-IP Collaborative Learning scenario.
+* **Context Broker Interface**: Interacts with the Context Broker to handle inference data.
+* **AML-IP Management Interface**: Manages the AML-IP nodes, allowing users to start, stop, and delete the nodes as well as monitor their status.
 
 .. toctree::
    :maxdepth: 1
