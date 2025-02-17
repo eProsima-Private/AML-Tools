@@ -77,7 +77,7 @@
 .. toctree::
    :caption: Tutorials
    :maxdepth: 2
-   :numbered: 5
+   :numbered: 10
    :hidden:
 
    /rst/tutorials/binary_classifier_mnist.rst
@@ -89,6 +89,7 @@
    /rst/tutorials/dashboard_inference
    /rst/tutorials/dashboard_debugger
    /rst/tutorials/dashboard_context_broker
+   /rst/tutorials/dahboard_aml_ip.rst
 
 .. _index_demos:
 
