@@ -89,7 +89,7 @@
    /rst/tutorials/dashboard_inference
    /rst/tutorials/dashboard_debugger
    /rst/tutorials/dashboard_context_broker
-   /rst/tutorials/dahboard_aml_ip.rst
+   /rst/tutorials/dashboard_aml_ip.rst
    /rst/tutorials/parallelize_aml_training_with_aml_ip.rst
 
 .. _index_demos:
