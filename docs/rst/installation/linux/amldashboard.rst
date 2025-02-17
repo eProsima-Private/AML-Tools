@@ -33,13 +33,8 @@ Ensure you have **Python3.11** installed together with the packages listed in th
 
 .. code-block:: bash
 
-<<<<<<< HEAD
-    python3 -m venv amlip-venv
-    source amlip-venv/bin/activate
-=======
     python3 -m venv aml-ip-venv
     source aml-ip-venv/bin/activate
->>>>>>> 9d5b802 (Add some fixes to documentation)
     wget https://raw.githubusercontent.com/eProsima-Private/AML-Dashboard/main/requirements.txt
     pip3 install -r requirements.txt
     pip install tensorflow[and-cuda]

@@ -89,11 +89,8 @@
    /rst/tutorials/dashboard_inference
    /rst/tutorials/dashboard_debugger
    /rst/tutorials/dashboard_context_broker
-   /rst/tutorials/dahboard_aml_ip.rst
-<<<<<<< HEAD
+   /rst/tutorials/dashboard_aml_ip.rst
    /rst/tutorials/parallelize_aml_training_with_aml_ip.rst
-=======
->>>>>>> caf020d (Add tutorial for AML-IP Nodes Management)
 
 .. _index_demos:
 

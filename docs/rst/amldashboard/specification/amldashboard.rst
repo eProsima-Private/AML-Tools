@@ -7,11 +7,7 @@
 AML Dashboard
 #############
 
-<<<<<<< HEAD
-The *AML Dashboard* serves as a user-friendly tool for training, evaluating, and applying |aml| models to numerous classification problems, including expressive gestures in music exploration.
-=======
 The *AML Dashboard* serves as a user-friendly tool for training, evaluating, and applying |aml| models to several datasets.
->>>>>>> ef01f98 (Update amldashboard documentation to include changes)
 Built upon the `Marcelle <https://marcelle.dev/>`__ framework, the dashboard offers standard interaction :term:`GUI`\s and the ability to create custom interactive widgets compatible with Marcelle's structure.
 
 The primary goal of the *AML Dashboard* is to enable users to:

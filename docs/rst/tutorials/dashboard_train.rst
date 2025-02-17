@@ -106,7 +106,7 @@ To train a model using the |aml| Dashboard, follow these steps:
    - Number of parallel trainings (executions).
    - Number of iterations per execution.
    - Percentage of the dataset to distribute in each execution.
-   - The target class when the classification is binary( this is the case when standard or custom datasets are used).
+   - The target class when the classification is binary (this is the case when standard or custom datasets are used).
 
 3. Configure the neural network parameters:
 
