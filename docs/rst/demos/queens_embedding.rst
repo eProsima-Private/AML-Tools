@@ -8,7 +8,7 @@ Create an AML Embedding
 In this section we describe step by step how to create an embedding.
 We illustrate the process by creating an embedding for the `N-Queens Completion Problem <https://github.com/eProsima-Private/AML-Tools/tree/main/resources/demos/queens_embedding.py>`_.
 
-The ``amldl`` package provides all the functions needed to build an embedding.
+The ``aml.amldl`` package provides all the functions needed to build an embedding.
 For the N-Queens Completion Problem we use the following functions:
 
 * **Descriptor**: object that represents the embedding. It works as a Python context manager. AML-DL functions only work within such context.
@@ -52,7 +52,7 @@ In the example below, we return just the duples and constants definitions, witho
 
     # Algebraic AI - Copyright - All Rights Reserved
 
-    from amldl import ADD, APP, C, CV, Descriptor, EXC, F, INC, M, R, T, V, S
+    from aml.amldl import ADD, APP, C, CV, Descriptor, EXC, F, INC, M, R, T, V, S
 
     boardDim = 8
 
