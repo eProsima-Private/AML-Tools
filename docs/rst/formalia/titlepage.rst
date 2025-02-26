@@ -44,9 +44,9 @@ Overview
   Thus, AML-IP is a communication framework that makes the transport protocols abstracted from the user, creating a platform that communicates each node without requiring the user to be concerned about communication issues.
   It also allows the creation of complex distributed networks with one or multiple users working on the same problem.
 
-#########################
-Get access to AML Toolkit
-#########################
+#################################
+Get access to the Open AML Engine
+#################################
 
 .. _get_access_toolkit:
 
