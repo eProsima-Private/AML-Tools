@@ -37,6 +37,7 @@ The dataset can be downloaded from
 or
 `Huggingface <https://huggingface.co/datasets/ylecun/mnist>`__.
 
+We provide a Python module, ``MNIST.py``,  with a series of helper functions to load and preprocess the dataset.
 The ``mnistGenerator`` searches and loads the datasets and provides functionality to load individual digits.
 The enum ``datasetType`` is used to select from which dataset (training, test or validation) samples come from.
 
@@ -87,8 +88,10 @@ The function ``digitToConstants`` creates a set that contains the indices for al
 the indices for all white pixels in the image (from ``ss`` to ``2ss``).
 Since the original images are grayscale, here we use a threshold to discriminate black and white pixels.
 
-Notice that for this particular embedding, we always have a pixel that can be either black (index j) or white (j + ss).
+Notice that for this particular embedding, every pixel has to be either black (index ``j``) or white (index ``j + ss``), for a total of ``ss`` pixels.
+Here all terms, have the same number of embedding constants.
 This is due to the black and white constants being complementary.
+In other problems, different terms could have a different amount of embedding constants.
 
 
 .. _tutorials_aml_pipeline_embedding_functions:
@@ -202,8 +205,8 @@ Training loop
 The training loop is simple.
 First we compute the new batch size.
 As the model matures, it processes relations faster, so it is usually a good idea to start with small batches and slowly grow over time.
-With the batch size, we simply select a set of relations.
-A relation is simply a tuple (image, label, positive/negative), to indicate whether certain image is a certain digit/label or not.
+Having the batch size, we select a subset of relations.
+A relation is a tuple (image, label, positive/negative), to indicate whether certain image is a certain digit/label or not.
 Finally, we enforce those relations into the model.
 
 .. code-block:: python
@@ -335,9 +338,9 @@ Below you can see the output of iteration 22.
 Postprocessing
 **************
 
-Here you can explore the atomization in the last model: `model.atomization`.
+Here you can explore the atomization in the last model: ``model.atomization``.
 
-But also the cumulative model that has been built combining the atomizations across the whole training process: `embedder.unionModel`.
+But also the cumulative model that has been built combining the atomizations across the whole training process: ``embedder.unionModel``.
 
 
 .. code-block:: python
@@ -460,10 +463,10 @@ Inference
 
 To perform inference in AML we first build a duple, and then we ask the model whether that duple is positive or not.
 This is done by checking the atoms from its terms.
-When a duple :math:`T_L < T_R` is in the model then all atoms in `T_L` are also part of `T_R`. In that case we say that there are no missing atoms, or no misses.
+When a duple :math:`T_L < T_R` is in the model then all atoms in :math:`T_L` are also part of :math:`T_R`. In that case we say that there are no missing atoms, or no misses.
 If on the other hand, many atoms are missing, then the duple is not present in the model.
 
-The following function computes the atoms that are present in `T_L` but are missing in `T_R` of a duple.
+The following function computes the atoms that are present in :math:`T_L` but are missing in :math:`T_R` of a duple.
 
 .. code-block:: python
 
