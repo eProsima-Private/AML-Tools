@@ -50,7 +50,7 @@ Get access to the Open AML Engine
 
 .. _get_access_toolkit:
 
-The Open AML Engine can be obtained at [github.com/Algebraic-AI/Open-AML-Engine](https://github.com/Algebraic-AI/Open-AML-Engine).
+The Open AML Engine can be obtained at `github.com/Algebraic-AI/Open-AML-Engine <https://github.com/Algebraic-AI/Open-AML-Engine>`__.
 
 To contact the engine team, you can open a discussion on the Github repository or send an email to `info@algebraic.ai <info@algebraic.ai>`__.
 
