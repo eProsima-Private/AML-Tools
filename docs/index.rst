@@ -15,11 +15,12 @@
 .. _index_amlapi:
 
 .. toctree::
-   :caption: Open AML Engine API Refernce
+   :caption: Open AML Engine
    :maxdepth: 2
+   :numbered: 5
    :hidden:
 
-   /rst/amlapi/amlapi.rst
+   API Reference </rst/amlapi/amlapi.rst>
 
 .. _index_installation:
 

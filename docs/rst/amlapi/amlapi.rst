@@ -7,13 +7,11 @@
 Open AML Engine API Reference
 #############################
 
-
-==========
 Core types
 ==========
 
 Segments
-########
+--------
 
 ``Segments`` represent sets of constants.
 
@@ -41,7 +39,7 @@ Segments
         """
 
 Atom
-####
+----
 
 The basic element in AML models.
 
@@ -66,7 +64,7 @@ The basic element in AML models.
 
 
 Duple
-#####
+-----
 
 Representation of a positive or negative duple in an embedding.
 
@@ -90,7 +88,7 @@ Representation of a positive or negative duple in an embedding.
         def copy(self)
 
 ConstantManager
-###############
+---------------
 
 Manages embedding constants, and their names and indices.
 
@@ -139,7 +137,7 @@ Manages embedding constants, and their names and indices.
 
 
 Model exploration and manipulation
-##################################
+----------------------------------
 
 Function to analyse and manipulate model atomizations and duples.
 
@@ -192,7 +190,7 @@ Function to analyse and manipulate model atomizations and duples.
         """
 
 Model save/load
-###############
+---------------
 
 .. code-block:: python
 
@@ -224,14 +222,14 @@ Model save/load
         use loadAtomizationFromFile instead.
         """
 
-============
+
 Embedders
-============
+=========
 
 Define how the training is performed.
 
 Full Crossing Embedder
-######################
+----------------------
 
 .. code-block:: python
 
@@ -270,7 +268,7 @@ Full Crossing Embedder
             """
 
 Full Crossing Embedder Parameters
-#################################
+---------------------------------
 
 .. code-block:: python
 
@@ -286,7 +284,7 @@ Full Crossing Embedder Parameters
         """
 
 Sparse Crossing Embedder
-######################
+------------------------
 
 .. code-block:: python
 
@@ -352,7 +350,7 @@ Sparse Crossing Embedder
             """
 
 Sparse Crossing Embedder Parameters
-###################################
+-----------------------------------
 
 .. code-block:: python
 
