@@ -12,6 +12,14 @@
 
    /rst/formalia/titlepage
 
+.. _index_amlapi:
+
+.. toctree::
+   :caption: Open AML Engine API Refernce
+   :maxdepth: 2
+   :hidden:
+
+   /rst/amlapi/amlapi.rst
 
 .. _index_installation:
 
@@ -80,7 +88,7 @@
    :numbered: 10
    :hidden:
 
-   /rst/tutorials/binary_classifier_mnist.rst
+   /rst/tutorials/multiclass_classifier_mnist.rst
    /rst/tutorials/aml_ip_collaborative_learning
    /rst/tutorials/aml_ip_workload_distribution
    /rst/tutorials/dashboard_data_management
@@ -102,7 +110,6 @@
 
    /rst/demos/queens_embedding
    /rst/demos/consistency_checker
-   /rst/demos/debugger
 
 .. _index_notes:
 

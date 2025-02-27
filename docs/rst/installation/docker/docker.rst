@@ -10,6 +10,5 @@ Docker Images (recommended)
 .. toctree::
    :maxdepth: 1
 
-   /rst/installation/docker/amldl
    /rst/installation/docker/amlip
    /rst/installation/docker/amldashboard

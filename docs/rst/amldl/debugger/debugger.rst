@@ -21,19 +21,22 @@ The AML-DL Debugger is a software tool to visualize semantic embeddings and some
 Currently the AML-DL Debugger can
 
 * organize and display the embedding constants,
-* display positive and negative duples using their given name instead of their indices,
+* display positive and negative duples using their given name,
 * study and explore embedding consistency,
+* modify, and reanalyse embeddings,
 * be extended to implement new modules.
 
 These properties allow for a quick feedback loop when developing or modifying semantic embedding using AML Description Language (AML-DL).
 
-.. figure:: /rst/figures/amldl_debugger.png
-    :align: center
 
 Components of the AML-DL Debugger
 *********************************
 
-The AML-DL Debugger combines a user interface and a module loader:
+The AML-DL Debugger has been developed using modern web technologies, with the aim of being intuitive and simple to use.
+Its architecture allows for easy extendibility with modules.
+It combines:
 
-* A Text User Interface (TUI) that displays several options in text view, so it can easily be used in remote machines or from a docker container.
-* A module loader that allows for new tools to be easily added.
+* An AML-DL Interpreter module.
+* An AML-DL Consistency Checker module.
+* An editor module, for quickly update and reanalyse embeddings.
+

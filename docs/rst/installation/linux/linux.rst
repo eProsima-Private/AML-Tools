@@ -10,6 +10,6 @@ AML Toolkit on Linux
 .. toctree::
    :maxdepth: 1
 
-   /rst/installation/linux/amldl
+   /rst/installation/linux/openamlengine
    /rst/installation/linux/amlip
    /rst/installation/linux/amldashboard
