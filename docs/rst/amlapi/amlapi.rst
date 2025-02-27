@@ -191,6 +191,39 @@ Function to analyse and manipulate model atomizations and duples.
         the lower atomic segment of 'term'.
         """
 
+Model save/load
+###############
+
+.. code-block:: python
+
+    def saveAtomizationOnFile(atomization, cmanager, filePathAndName):
+        """
+        Save 'atomization' and 'cmanager' to 'filePathAndName'.aml.
+        It only works if amlset is an alias for set. If using bitarrays,
+        use saveAtomizationOnFileUsingBitarrays instead.
+        """
+
+    def loadAtomizationFromFile(filePathAndName):
+        """
+        Load 'cmanager' and 'atomization' from 'filePathAndName'.aml.
+        It only works if amlset is an alias for set. If using bitarrays,
+        use loadAtomizationFromFileUsingBitarrays instead.
+        """
+
+    def saveAtomizationOnFileUsingBitarrays(atomization, cmanager, filePathAndName):
+        """
+        Save 'atomization' and 'cmanager' to 'filePathAndName'.aml.
+        It only works if amlset is an alias for bitarray. If using bitarrays,
+        use saveAtomizationOnFile instead.
+        """
+
+    def loadAtomizationFromFileUsingBitarrays(filePathAndName):
+        """
+        Load 'cmanager' and 'atomization' from 'filePathAndName'.aml.
+        It only works if amlset is an alias for bitarray. If using sets,
+        use loadAtomizationFromFile instead.
+        """
+
 ============
 Embedders
 ============
