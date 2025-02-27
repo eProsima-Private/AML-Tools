@@ -12,6 +12,14 @@
 
    /rst/formalia/titlepage
 
+.. _index_amlapi:
+
+.. toctree::
+   :caption: Open AML Engine API Refernce
+   :maxdepth: 2
+   :hidden:
+
+   /rst/amlapi/amlapi.rst
 
 .. _index_installation:
 
