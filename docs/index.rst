@@ -99,6 +99,7 @@
    /rst/tutorials/dashboard_context_broker
    /rst/tutorials/dashboard_aml_ip.rst
    /rst/tutorials/parallelize_aml_training_with_aml_ip.rst
+   /rst/tutorials/dashboard_add_custom_model.rst
 
 .. _index_demos:
 
