@@ -44,7 +44,7 @@ Here is an example of basic usage
 
 .. raw:: html
 
-    <video width="100%" autoplay loop>
+    <video id=debugger width=100% height=auto autoplay loop controls muted>
         <source src="../../../_static/resources/videos/amldlDebugger_basic_usage.mp4">
         Your browser does not support the video tag.
     </video>
