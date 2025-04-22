@@ -40,3 +40,11 @@ It combines:
 * An AML-DL Consistency Checker module.
 * An editor module, for quickly update and reanalyse embeddings.
 
+Here is an example of basic usage
+
+.. raw:: html
+
+    <video width="100%" autoplay loop>
+        <source src="../../../../resources/videos/amldlDebugger_basic_usage.mp4">
+        Your browser does not support the video tag.
+    </video>
